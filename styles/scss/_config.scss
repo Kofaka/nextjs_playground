@@ -1,0 +1,21 @@
+// Interface colors
+$white: #ffffff;
+
+$interface_colors: (
+  "white": $white,
+);
+
+// Font sizes
+$regular_font_weight: 400;
+$medium_font_weight: 500;
+$semi_bold_font_weight: 600;
+$bold_font_weight: 700;
+
+// Breakpoints
+$breakpoint_xs: 480px;
+$breakpoint_s: 512px;
+$breakpoint_m: 768px;
+$breakpoint_ml: 991px;
+$breakpoint_l: 1024px;
+$breakpoint_xl: 1280px;
+$breakpoint_xxl: 1440px;
