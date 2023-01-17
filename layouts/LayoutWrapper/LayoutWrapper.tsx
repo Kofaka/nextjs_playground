@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import dayjs from 'dayjs';
 import Link from 'next/link';
 import NextImage from 'next/image';
 import { ConfigProvider, Layout, theme } from 'antd';
@@ -35,7 +36,7 @@ const LayoutWrapper = ({
           },
         }}
       >
-        <Layout>
+        <Layout className={styles.root}>
           <Header className={styles.header}>
             <Link
               href={HOME}
@@ -57,7 +58,9 @@ const LayoutWrapper = ({
 
           <Content className="site-layout">{children}</Content>
 
-          <Footer>Footer</Footer>
+          <Footer className={styles.footer}>
+            <p>© Kofa {dayjs().year()}</p>
+          </Footer>
         </Layout>
       </ConfigProvider>
     </>

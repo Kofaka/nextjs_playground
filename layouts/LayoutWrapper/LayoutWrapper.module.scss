@@ -2,13 +2,21 @@
 
 $logo-wrapper-width: 60px;
 
+.root {
+  min-height: 100%;
+}
+
 .header {
   display: grid;
   gap: 8px;
   grid-template-columns: $logo-wrapper-width auto;
 
   &[class*="ant-layout-header"] {
-    background-color: #000000;
+    position: sticky;
+    width: 100%;
+    height: $header_height;
+    top: 0;
+    background-color: $dark;
   }
 }
 
@@ -21,4 +29,16 @@ $logo-wrapper-width: 60px;
   align-items: center;
   border: 1px solid $main;
   border-radius: 8px;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+
+  &[class*="ant-layout-footer"] {
+    height: $footer_height;
+    background-color: $dark;
+  }
 }

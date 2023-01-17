@@ -1,8 +1,12 @@
 // Interface colors
+$dark: #000000;
+$white: #ffffff;
 $main: #8200ff;
 
 $interface_colors: (
-  "$main": $main,
+  "dark": $dark,
+  "white": $white,
+  "main": $main,
 );
 
 // Font sizes
@@ -19,3 +23,7 @@ $breakpoint_ml: 991px;
 $breakpoint_l: 1024px;
 $breakpoint_xl: 1280px;
 $breakpoint_xxl: 1440px;
+
+// Layout
+$header_height: 64px;
+$footer_height: 64px;
