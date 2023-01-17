@@ -1,0 +1,15 @@
+@import "styles/scss/base";
+
+$logo-width: 56px;
+
+.header {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: $logo-width auto;
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
