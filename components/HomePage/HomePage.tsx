@@ -1,6 +1,7 @@
 import { useQuery } from '@apollo/client';
 import Image from 'next/image';
-import moment from 'moment';
+import dayjs from 'dayjs';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
 // Api
 import { GET_CAPSULES } from 'api/capsules/queries';
 // Types
@@ -11,6 +12,8 @@ import {
 } from 'api/capsules/types/Capsules';
 // Styles
 import styles from './HomePage.module.scss';
+
+dayjs.extend(localizedFormat);
 
 const HomePage = (): JSX.Element => {
   const { data, loading } = useQuery<Capsules, CapsulesVariables>(
@@ -35,7 +38,7 @@ const HomePage = (): JSX.Element => {
   };
 
   return (
-    <main className={styles.root}>
+    <div className={styles.root}>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
@@ -136,15 +139,24 @@ const HomePage = (): JSX.Element => {
             ? 'Wait a while … '
             : getCapsules().map(({ id, type, landings, original_launch }) => (
                 <li key={id}>
-                  The capsule <i>{`"#${id} ${type}"`}</i> has <b>{landings}</b>{' '}
-                  landings,
-                  {' which was planned to launch on '}
-                  <b>{moment(original_launch).format('LL')}</b>
+                  The capsule <i>{`"#${id} ${type}"`}</i> has <b>{landings}</b>
+                  {' landings'}
+                  {original_launch ? (
+                    <>
+                      {', which was planned to launch on '}
+                      <b>{dayjs(original_launch).format('LLL')}</b>
+                    </>
+                  ) : (
+                    <>
+                      {' '}
+                      <i>(has not been launched yet)</i>
+                    </>
+                  )}
                 </li>
               ))}
         </ul>
       </div>
-    </main>
+    </div>
   );
 };
 
