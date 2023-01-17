@@ -29,6 +29,10 @@ const LayoutWrapper = ({
       <ConfigProvider
         theme={{
           algorithm: theme.darkAlgorithm,
+          token: {
+            colorBgBase: '#070025',
+            colorBgLayout: '#070025',
+          },
         }}
       >
         <Layout>
