@@ -1,15 +1,24 @@
 @import "styles/scss/base";
 
-$logo-width: 56px;
+$logo-wrapper-width: 60px;
 
 .header {
   display: grid;
   gap: 8px;
-  grid-template-columns: $logo-width auto;
+  grid-template-columns: $logo-wrapper-width auto;
+
+  &[class*="ant-layout-header"] {
+    background-color: #000000;
+  }
 }
 
 .logoWrapper {
+  margin: auto;
   display: flex;
+  width: $logo-wrapper-width;
+  height: 52px;
   justify-content: center;
   align-items: center;
+  border: 1px solid $main;
+  border-radius: 8px;
 }
