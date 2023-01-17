@@ -56,7 +56,7 @@ const LayoutWrapper = ({
             </Link>
           </Header>
 
-          <Content className="site-layout">{children}</Content>
+          <Content className={styles.body}>{children}</Content>
 
           <Footer className={styles.footer}>
             <p>© Kofa {dayjs().year()}</p>

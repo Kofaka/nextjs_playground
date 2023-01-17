@@ -1,18 +1,23 @@
+@use "sass:math";
 @import "styles/scss/base";
 
-$logo-wrapper-width: 60px;
+$logo-wrapper-height: 48px;
+$logo-wrapper-width: math.floor($logo-wrapper-height * 1.5);
 
 .root {
   min-height: 100%;
 }
 
 .header {
+  padding-block: $base-padding;
   display: grid;
-  gap: 8px;
+  gap: $base-padding;
   grid-template-columns: $logo-wrapper-width auto;
+  z-index: 1;
 
   &[class*="ant-layout-header"] {
     position: sticky;
+    padding-inline: $base-padding;
     width: 100%;
     height: $header_height;
     top: 0;
@@ -24,20 +29,26 @@ $logo-wrapper-width: 60px;
   margin: auto;
   display: flex;
   width: $logo-wrapper-width;
-  height: 52px;
+  height: $logo-wrapper-height;
   justify-content: center;
   align-items: center;
   border: 1px solid $main;
   border-radius: 8px;
 }
 
+.body {
+  padding: $base-padding;
+}
+
 .footer {
+  padding-block: $base-padding;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 8px;
+  gap: $base-padding;
 
   &[class*="ant-layout-footer"] {
+    padding-inline: $base-padding;
     height: $footer_height;
     background-color: $dark;
   }
