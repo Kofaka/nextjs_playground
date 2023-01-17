@@ -1,4 +1,6 @@
 import { NextPage } from 'next';
+// Hocks
+import withApollo from 'hocs/withApollo';
 // Layout
 import Head from 'layouts/Head/Head';
 // Components
@@ -17,4 +19,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default withApollo(Home);

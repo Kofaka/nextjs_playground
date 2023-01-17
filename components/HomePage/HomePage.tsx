@@ -1,8 +1,39 @@
+import { useQuery } from '@apollo/client';
 import Image from 'next/image';
+import moment from 'moment';
+// Api
+import { GET_CAPSULES } from 'api/capsules/queries';
+// Types
+import {
+  Capsules,
+  Capsules_capsules,
+  CapsulesVariables,
+} from 'api/capsules/types/Capsules';
 // Styles
 import styles from './HomePage.module.scss';
 
-const HomePage = () => {
+const HomePage = (): JSX.Element => {
+  const { data, loading } = useQuery<Capsules, CapsulesVariables>(
+    GET_CAPSULES,
+    {
+      fetchPolicy: 'cache-and-network',
+      variables: {
+        sort: 'original_launch',
+        order: 'descending',
+      },
+    }
+  );
+
+  const getCapsules = (): Partial<Capsules_capsules>[] => {
+    const capsules: Partial<Capsules_capsules>[] = [];
+
+    data?.capsules?.map((capsule) => capsule && capsules.push(capsule));
+
+    return capsules.sort((a, b) =>
+      a?.id && b?.id ? a.id.localeCompare(b.id) : -1
+    );
+  };
+
   return (
     <main className={styles.root}>
       <div className={styles.description}>
@@ -95,6 +126,23 @@ const HomePage = () => {
             with&nbsp;Vercel.
           </p>
         </a>
+      </div>
+
+      <div>
+        <h2>SpaseX landings</h2>
+        <br />
+        <ul>
+          {loading
+            ? 'Wait a while … '
+            : getCapsules().map(({ id, type, landings, original_launch }) => (
+                <li key={id}>
+                  The capsule <i>{`"#${id} ${type}"`}</i> has <b>{landings}</b>{' '}
+                  landings,
+                  {' which was planned to launch on '}
+                  <b>{moment(original_launch).format('LL')}</b>
+                </li>
+              ))}
+        </ul>
       </div>
     </main>
   );
