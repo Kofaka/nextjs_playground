@@ -3,7 +3,3 @@
 .loader {
   min-height: calc(100vh - #{$header_height + $footer_height});
 }
-
-.list {
-  row-gap: 16px;
-}
