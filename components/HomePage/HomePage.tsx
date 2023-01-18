@@ -1,7 +1,8 @@
+import { useMemo, useState } from 'react';
 import { useQuery } from '@apollo/client';
 import dayjs from 'dayjs';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
-import { Spin, Space, Typography } from 'antd';
+import { Spin, Space, Typography, Pagination, PaginationProps } from 'antd';
 // Api
 import { GET_SHIPS } from 'api/ships/queries';
 // Types
@@ -25,7 +26,13 @@ const getExistingShipsList = (
   return ships;
 };
 
+const DEFAULT_CURRENT_PAGE = 1;
+const DEFAULT_PAGE_SIZE = 3;
+
 const HomePage = (): JSX.Element => {
+  const [currentPage, setCurrentPage] = useState<number>(DEFAULT_CURRENT_PAGE);
+  const [pageSize, setPageSize] = useState<number>(DEFAULT_PAGE_SIZE);
+
   const { data, loading } = useQuery<Ships, ShipsVariables>(GET_SHIPS, {
     fetchPolicy: 'cache-and-network',
     variables: {
@@ -34,14 +41,55 @@ const HomePage = (): JSX.Element => {
     },
   });
 
+  const onPaginationChange: PaginationProps['onChange'] = (page, size) => {
+    if (currentPage !== page) {
+      setCurrentPage(page);
+    }
+    if (pageSize !== size) {
+      setPageSize(size);
+    }
+  };
+
   const ships = getExistingShipsList(data?.ships);
+
+  /**
+   * We should handle the pagination on the frontend side,
+   * coz there's no way to get the total number of ships,
+   * and thus - make the proper pagination
+   **/
+  const paginatedShipsList = useMemo((): Ships_ships[] => {
+    const from =
+      currentPage > DEFAULT_CURRENT_PAGE ? (currentPage - 1) * pageSize : 0;
+    const to = currentPage * pageSize;
+
+    return ships.slice(from, to);
+  }, [ships, currentPage, pageSize]);
+
+  const pageSizeOptions = [
+    DEFAULT_PAGE_SIZE,
+    DEFAULT_PAGE_SIZE * 2,
+    DEFAULT_PAGE_SIZE * 3,
+    DEFAULT_PAGE_SIZE * 4,
+    DEFAULT_PAGE_SIZE * 8,
+  ];
 
   return (
     <Spin tip="Loading..." spinning={loading} className={styles.loader}>
       <Space direction="vertical" size="middle">
         <Title>The list of SpaseX ships</Title>
 
-        <ShipsList ships={ships} />
+        <ShipsList ships={paginatedShipsList} />
+
+        <Pagination
+          onChange={onPaginationChange}
+          pageSizeOptions={pageSizeOptions}
+          defaultCurrent={DEFAULT_CURRENT_PAGE}
+          defaultPageSize={DEFAULT_PAGE_SIZE}
+          total={ships.length}
+          disabled={!ships.length || loading}
+          showSizeChanger
+          showQuickJumper
+        />
       </Space>
     </Spin>
   );
