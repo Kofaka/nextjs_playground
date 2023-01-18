@@ -2,7 +2,7 @@
 @import "styles/scss/base";
 
 $logo-wrapper-height: 48px;
-$logo-wrapper-width: math.floor($logo-wrapper-height * 1.5);
+$logo-wrapper-width: math.floor($logo-wrapper-height * 1.375);
 
 .root {
   min-height: 100%;

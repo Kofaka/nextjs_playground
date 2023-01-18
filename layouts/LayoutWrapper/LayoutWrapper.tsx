@@ -49,8 +49,8 @@ const LayoutWrapper = ({
                 src="/kofa-logo.svg"
                 alt="Kofa logo"
                 blurDataURL="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                width={40}
-                height={40}
+                width={46}
+                height={46}
                 priority
               />
             </Link>
