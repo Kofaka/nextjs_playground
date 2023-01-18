@@ -13,7 +13,11 @@ const NotFoundPage = () => {
   };
 
   return (
-    <LayoutWrapper title="Page not found" description="Page not found">
+    <LayoutWrapper
+      title="Page not found"
+      description="Page not found"
+      withSidebar={false}
+    >
       <Result
         status="404"
         title="404"

@@ -5,22 +5,25 @@ import NextImage from 'next/image';
 import { ConfigProvider, Layout, theme } from 'antd';
 // Constants
 import { HOME } from 'constants/routes';
-// Layout
+// Layouts
 import Head from 'layouts/Head/Head';
+import SideBarMenu from 'layouts/SideBarMenu/SideBarMenu';
 // Styles
 import styles from './LayoutWrapper.module.scss';
 
-const { Header, Footer, Content } = Layout;
+const { Header, Content, Footer } = Layout;
 
 type LayoutWrapperProps = {
   title: string;
   description: string;
+  withSidebar?: boolean;
   children: ReactNode;
 };
 
 const LayoutWrapper = ({
   title,
   description,
+  withSidebar = true,
   children,
 }: LayoutWrapperProps) => {
   return (
@@ -56,11 +59,17 @@ const LayoutWrapper = ({
             </Link>
           </Header>
 
-          <Content className={styles.body}>{children}</Content>
+          <Layout>
+            {withSidebar && <SideBarMenu />}
 
-          <Footer className={styles.footer}>
-            <p>© Kofa {dayjs().year()}</p>
-          </Footer>
+            <Layout>
+              <Content className={styles.body}>{children}</Content>
+
+              <Footer className={styles.footer}>
+                <p>© Kofa {dayjs().year()}</p>
+              </Footer>
+            </Layout>
+          </Layout>
         </Layout>
       </ConfigProvider>
     </>
