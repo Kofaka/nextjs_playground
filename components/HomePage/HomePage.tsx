@@ -2,7 +2,14 @@ import { useMemo, useState } from 'react';
 import { useQuery } from '@apollo/client';
 import dayjs from 'dayjs';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
-import { Spin, Space, Typography, Pagination, PaginationProps } from 'antd';
+import {
+  Spin,
+  Space,
+  Empty,
+  Typography,
+  Pagination,
+  PaginationProps,
+} from 'antd';
 // Api
 import { GET_SHIPS } from 'api/ships/queries';
 // Types
@@ -74,22 +81,34 @@ const HomePage = (): JSX.Element => {
   ];
 
   return (
-    <Spin tip="Loading..." spinning={loading} className={styles.loader}>
-      <Space direction="vertical" size="middle">
+    <Spin className={styles.root} spinning={loading} tip="Loading...">
+      <Space className={styles.content} direction="vertical" size="middle">
         <Title>The list of SpaseX ships</Title>
 
-        <ShipsList ships={paginatedShipsList} />
+        {paginatedShipsList.length <= 0 ? (
+          <Space
+            className={styles.emptyWrapper}
+            direction="vertical"
+            align="center"
+          >
+            <Empty />
+          </Space>
+        ) : (
+          <>
+            <ShipsList ships={paginatedShipsList} />
 
-        <Pagination
-          onChange={onPaginationChange}
-          pageSizeOptions={pageSizeOptions}
-          defaultCurrent={DEFAULT_CURRENT_PAGE}
-          defaultPageSize={DEFAULT_PAGE_SIZE}
-          total={ships.length}
-          disabled={!ships.length || loading}
-          showSizeChanger
-          showQuickJumper
-        />
+            <Pagination
+              onChange={onPaginationChange}
+              pageSizeOptions={pageSizeOptions}
+              defaultCurrent={DEFAULT_CURRENT_PAGE}
+              defaultPageSize={DEFAULT_PAGE_SIZE}
+              total={ships.length}
+              disabled={!ships.length || loading}
+              showSizeChanger
+              showQuickJumper
+            />
+          </>
+        )}
       </Space>
     </Spin>
   );

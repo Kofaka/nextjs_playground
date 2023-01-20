@@ -1,5 +1,13 @@
 @import "styles/scss/base";
 
-.loader {
+.root {
   min-height: calc(100vh - #{$header_height + $footer_height});
+}
+
+.content {
+  width: 100%;
+}
+
+.emptyWrapper {
+  width: 100%;
 }
