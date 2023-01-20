@@ -1,8 +1,11 @@
 import { ReactNode } from 'react';
 import dayjs from 'dayjs';
+import cn from 'classnames';
 import Link from 'next/link';
 import NextImage from 'next/image';
-import { ConfigProvider, Layout, theme } from 'antd';
+import { ConfigProvider, Layout, Space, Spin, theme } from 'antd';
+// Hooks
+import { useHasMounted } from 'hooks';
 // Constants
 import { HOME } from 'constants/routes';
 // Layouts
@@ -26,6 +29,8 @@ const LayoutWrapper = ({
   withSidebar = true,
   children,
 }: LayoutWrapperProps) => {
+  const hasMounted = useHasMounted();
+
   return (
     <>
       <Head title={title} description={description} />
@@ -63,7 +68,17 @@ const LayoutWrapper = ({
             {withSidebar && <SideBarMenu />}
 
             <Layout>
-              <Content className={styles.body}>{children}</Content>
+              <Content
+                className={cn(styles.body, { [styles.loading]: !hasMounted })}
+              >
+                {hasMounted ? (
+                  children
+                ) : (
+                  <Space direction="vertical" align="center">
+                    <Spin spinning size="large" />
+                  </Space>
+                )}
+              </Content>
 
               <Footer className={styles.footer}>
                 <p>© Kofa {dayjs().year()}</p>

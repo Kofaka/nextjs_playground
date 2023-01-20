@@ -38,6 +38,12 @@ $logo-wrapper-width: math.floor($logo-wrapper-height * 1.375);
 
 .body {
   padding: $base-padding;
+
+  &.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .footer {
