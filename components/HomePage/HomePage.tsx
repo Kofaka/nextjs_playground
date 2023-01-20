@@ -85,7 +85,7 @@ const HomePage = (): JSX.Element => {
       <Space className={styles.content} direction="vertical" size="middle">
         <Title>The list of SpaseX ships</Title>
 
-        {paginatedShipsList.length <= 0 ? (
+        {!loading && paginatedShipsList.length <= 0 ? (
           <Space
             className={styles.emptyWrapper}
             direction="vertical"
