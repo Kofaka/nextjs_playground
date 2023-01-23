@@ -47,7 +47,7 @@ describe('layouts/SideBarMenu/SideBarMenu', () => {
     expect(screen.getByRole('complementary')).toHaveClass(expandedClassName);
   });
 
-  it('the "Home Page Management" menu item', async () => {
+  it('should properly handle the click on menu item', async () => {
     const pushMock = jest.fn().mockImplementation(() => Promise.resolve());
 
     render(<SideBarMenu />, {
