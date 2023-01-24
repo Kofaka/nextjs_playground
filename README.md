@@ -17,3 +17,32 @@ pnpm dev
 ```
 
 Open [http://localhost:3333](http://localhost:3333) with your browser to see the result.
+
+## Unit tests
+
+To run unit tests one's:
+```bash
+npm run test
+# or
+yarn test
+# or
+pnpm test
+```
+
+To re-run tests each time a file is changed use the following command:
+```bash
+npm run test --watch
+# or
+yarn test --watch
+# or
+pnpm test --watch
+```
+
+To see the project test coverage use the following command:
+```bash
+npm run test --coverage
+# or
+yarn test --coverage
+# or
+pnpm test --coverage
+```
