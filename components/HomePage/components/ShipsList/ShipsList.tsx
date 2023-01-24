@@ -7,10 +7,14 @@ import styles from './ShipsList.module.scss';
 const { Meta } = Card;
 
 type ShipsListProps = {
-  ships: Ships_ships[];
+  ships?: Ships_ships[];
 };
 
-const ShipsList = ({ ships }: ShipsListProps) => {
+const ShipsList = ({ ships }: ShipsListProps): JSX.Element | null => {
+  if (!ships?.length) {
+    return null;
+  }
+
   return (
     <Row
       className={styles.root}
