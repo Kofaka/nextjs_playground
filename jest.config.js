@@ -17,7 +17,6 @@ module.exports = {
     '!<rootDir>/coverage/**',
   ],
   coverageReporters: ['html', 'text', 'text-summary', 'cobertura'],
-  testMatch: ['^.+\\.(js|jsx|ts|tsx)$'],
   moduleNameMapper: {
     // Handle CSS imports (with CSS modules)
     // https://jestjs.io/docs/webpack#mocking-css-modules
