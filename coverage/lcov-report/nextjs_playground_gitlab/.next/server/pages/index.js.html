@@ -1,0 +1,712 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for nextjs_playground_gitlab/.next/server/pages/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">nextjs_playground_gitlab/.next/server/pages</a> index.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>0/210</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">0% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>0/210</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >/*</span></span></span>
+<span class="cstat-no" title="statement not covered" > * ATTENTION: An "eval-source-map" devtool has been used.</span>
+<span class="cstat-no" title="statement not covered" > * This devtool is neither made for production nor for readable output files.</span>
+<span class="cstat-no" title="statement not covered" > * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.</span>
+<span class="cstat-no" title="statement not covered" > * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)</span>
+<span class="cstat-no" title="statement not covered" > * or disable the default devtool with "devtool: false".</span>
+<span class="cstat-no" title="statement not covered" > * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).</span>
+<span class="cstat-no" title="statement not covered" > */</span>
+<span class="cstat-no" title="statement not covered" >(() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >var exports = {};</span>
+<span class="cstat-no" title="statement not covered" >exports.id = "pages/index";</span>
+<span class="cstat-no" title="statement not covered" >exports.ids = ["pages/index"];</span>
+<span class="cstat-no" title="statement not covered" >exports.modules = {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ "./api/ships/queries.ts":</span>
+<span class="cstat-no" title="statement not covered" >/*!******************************!*\</span>
+<span class="cstat-no" title="statement not covered" >  !*** ./api/ships/queries.ts ***!</span>
+<span class="cstat-no" title="statement not covered" >  \******************************/</span>
+<span class="cstat-no" title="statement not covered" >/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >"use strict";</span>
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"GET_SHIPS\": () =&gt; (/* binding */ GET_SHIPS)\n/* harmony export */ });\n/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @apollo/client */ \"@apollo/client\");\n/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_apollo_client__WEBPACK_IMPORTED_MODULE_0__);\n\nconst GET_SHIPS = _apollo_client__WEBPACK_IMPORTED_MODULE_0__.gql`\n  query Ships(\n    $order: String\n    $sort: String\n    $offset: Int\n    $limit: Int\n    $find: ShipsFind\n  ) {\n    ships(\n      order: $order\n      sort: $sort\n      offset: $offset\n      limit: $limit\n      find: $find\n    ) {\n      id\n      name\n      year_built\n      image\n      status\n      active\n      home_port\n      attempted_landings\n      successful_landings\n      weight_kg\n      missions {\n        flight\n        name\n      }\n    }\n  }\n`;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9hcGkvc2hpcHMvcXVlcmllcy50cy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQTtBQUVPLE1BQU1DLFNBQVMsR0FBR0QsK0NBQUk7QUFDN0I7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsQ0EvQk8iLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9uZXh0anNfcGxheWdyb3VuZC8uL2FwaS9zaGlwcy9xdWVyaWVzLnRzPzJiZGQiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgZ3FsIH0gZnJvbSAnQGFwb2xsby9jbGllbnQnO1xuXG5leHBvcnQgY29uc3QgR0VUX1NISVBTID0gZ3FsYFxuICBxdWVyeSBTaGlwcyhcbiAgICAkb3JkZXI6IFN0cmluZ1xuICAgICRzb3J0OiBTdHJpbmdcbiAgICAkb2Zmc2V0OiBJbnRcbiAgICAkbGltaXQ6IEludFxuICAgICRmaW5kOiBTaGlwc0ZpbmRcbiAgKSB7XG4gICAgc2hpcHMoXG4gICAgICBvcmRlcjogJG9yZGVyXG4gICAgICBzb3J0OiAkc29ydFxuICAgICAgb2Zmc2V0OiAkb2Zmc2V0XG4gICAgICBsaW1pdDogJGxpbWl0XG4gICAgICBmaW5kOiAkZmluZFxuICAgICkge1xuICAgICAgaWRcbiAgICAgIG5hbWVcbiAgICAgIHllYXJfYnVpbHRcbiAgICAgIGltYWdlXG4gICAgICBzdGF0dXNcbiAgICAgIGFjdGl2ZVxuICAgICAgaG9tZV9wb3J0XG4gICAgICBhdHRlbXB0ZWRfbGFuZGluZ3NcbiAgICAgIHN1Y2Nlc3NmdWxfbGFuZGluZ3NcbiAgICAgIHdlaWdodF9rZ1xuICAgICAgbWlzc2lvbnMge1xuICAgICAgICBmbGlnaHRcbiAgICAgICAgbmFtZVxuICAgICAgfVxuICAgIH1cbiAgfVxuYDtcbiJdLCJuYW1lcyI6WyJncWwiLCJHRVRfU0hJUFMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./api/ships/queries.ts\n");</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ }),</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ "./components/HomePage/HomePage.tsx":</span>
+<span class="cstat-no" title="statement not covered" >/*!******************************************!*\</span>
+<span class="cstat-no" title="statement not covered" >  !*** ./components/HomePage/HomePage.tsx ***!</span>
+<span class="cstat-no" title="statement not covered" >  \******************************************/</span>
+<span class="cstat-no" title="statement not covered" >/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >"use strict";</span>
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () =&gt; (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @apollo/client */ \"@apollo/client\");\n/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_apollo_client__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dayjs */ \"dayjs\");\n/* harmony import */ var dayjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dayjs__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var dayjs_plugin_localizedFormat__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! dayjs/plugin/localizedFormat */ \"dayjs/plugin/localizedFormat\");\n/* harmony import */ var dayjs_plugin_localizedFormat__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(dayjs_plugin_localizedFormat__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! antd */ \"antd\");\n/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var api_ships_queries__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! api/ships/queries */ \"./api/ships/queries.ts\");\n/* harmony import */ var components_HomePage_components_ShipsList_ShipsList__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! components/HomePage/components/ShipsList/ShipsList */ \"./components/HomePage/components/ShipsList/ShipsList.tsx\");\n/* harmony import */ var _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./HomePage.module.scss */ \"./components/HomePage/HomePage.module.scss\");\n/* harmony import */ var _HomePage_module_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_HomePage_module_scss__WEBPACK_IMPORTED_MODULE_8__);\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__);\nvar _jsxFileName = \"/Users/odarka/Sites/Litslink_Prpjects/Kofaka/nextjs_playground_gitlab/components/HomePage/HomePage.tsx\";\n\n\n\n\n // Api\n\n // Types\n\n// Components\n // Styles\n\n\n\n\ndayjs__WEBPACK_IMPORTED_MODULE_2___default().extend((dayjs_plugin_localizedFormat__WEBPACK_IMPORTED_MODULE_3___default()));\nconst {\n  Title\n} = antd__WEBPACK_IMPORTED_MODULE_4__.Typography;\n\nconst getExistingShipsList = data =&gt; {\n  const ships = [];\n  data?.map(ship =&gt; ship &amp;&amp; ships.push(ship));\n  return ships;\n};\n\nconst DEFAULT_CURRENT_PAGE = 1;\nconst DEFAULT_PAGE_SIZE = 3;\n\nconst HomePage = () =&gt; {\n  const {\n    0: currentPage,\n    1: setCurrentPage\n  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(DEFAULT_CURRENT_PAGE);\n  const {\n    0: pageSize,\n    1: setPageSize\n  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(DEFAULT_PAGE_SIZE);\n  const {\n    data,\n    loading\n  } = (0,_apollo_client__WEBPACK_IMPORTED_MODULE_1__.useQuery)(api_ships_queries__WEBPACK_IMPORTED_MODULE_5__.GET_SHIPS, {\n    fetchPolicy: 'cache-and-network',\n    variables: {\n      sort: 'year_built',\n      order: 'descending'\n    }\n  });\n\n  const onPaginationChange = (page, size) =&gt; {\n    if (currentPage !== page) {\n      setCurrentPage(page);\n    }\n\n    if (pageSize !== size) {\n      setPageSize(size);\n    }\n  };\n\n  const ships = getExistingShipsList(data?.ships);\n  /**\n   * We should handle the pagination on the frontend side,\n   * coz there's no way to get the total number of ships,\n   * and thus - make the proper pagination\n   **/\n\n  const paginatedShipsList = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() =&gt; {\n    const from = currentPage &gt; DEFAULT_CURRENT_PAGE ? (currentPage - 1) * pageSize : 0;\n    const to = currentPage * pageSize;\n    return ships.slice(from, to);\n  }, [ships, currentPage, pageSize]);\n  const pageSizeOptions = [DEFAULT_PAGE_SIZE, DEFAULT_PAGE_SIZE * 2, DEFAULT_PAGE_SIZE * 3, DEFAULT_PAGE_SIZE * 4, DEFAULT_PAGE_SIZE * 8];\n  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxDEV)(antd__WEBPACK_IMPORTED_MODULE_4__.Spin, {\n    className: (_HomePage_module_scss__WEBPACK_IMPORTED_MODULE_8___default().root),\n    spinning: loading,\n    tip: \"Loading...\",\n    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxDEV)(antd__WEBPACK_IMPORTED_MODULE_4__.Space, {\n      className: (_HomePage_module_scss__WEBPACK_IMPORTED_MODULE_8___default().content),\n      direction: \"vertical\",\n      size: \"middle\",\n      children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxDEV)(Title, {\n        children: \"The list of SpaseX ships\"\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 86,\n        columnNumber: 9\n      }, undefined), !loading &amp;&amp; paginatedShipsList.length &lt;= 0 ? /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxDEV)(antd__WEBPACK_IMPORTED_MODULE_4__.Space, {\n        className: (_HomePage_module_scss__WEBPACK_IMPORTED_MODULE_8___default().emptyWrapper),\n        direction: \"vertical\",\n        align: \"center\",\n        children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxDEV)(antd__WEBPACK_IMPORTED_MODULE_4__.Empty, {}, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 94,\n          columnNumber: 13\n        }, undefined)\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 89,\n        columnNumber: 11\n      }, undefined) : /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxDEV)(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {\n        children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxDEV)(components_HomePage_components_ShipsList_ShipsList__WEBPACK_IMPORTED_MODULE_6__[\"default\"], {\n          ships: paginatedShipsList\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 98,\n          columnNumber: 13\n        }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxDEV)(antd__WEBPACK_IMPORTED_MODULE_4__.Pagination, {\n          onChange: onPaginationChange,\n          pageSizeOptions: pageSizeOptions,\n          defaultCurrent: DEFAULT_CURRENT_PAGE,\n          defaultPageSize: DEFAULT_PAGE_SIZE,\n          total: ships.length,\n          disabled: !ships.length || loading,\n          showSizeChanger: true,\n          showQuickJumper: true\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 100,\n          columnNumber: 13\n        }, undefined)]\n      }, void 0, true)]\n    }, void 0, true, {\n      fileName: _jsxFileName,\n      lineNumber: 85,\n      columnNumber: 7\n    }, undefined)\n  }, void 0, false, {\n    fileName: _jsxFileName,\n    lineNumber: 84,\n    columnNumber: 5\n  }, undefined);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HomePage);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0hvbWVQYWdlL0hvbWVQYWdlLnRzeC5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtDQVNBOztDQUVBOztBQUVBO0NBRUE7O0FBQ0E7OztBQUVBRyxtREFBQSxDQUFhQyxxRUFBYjtBQUVBLE1BQU07RUFBRVU7QUFBRixJQUFZTiw0Q0FBbEI7O0FBRUEsTUFBTU8sb0JBQW9CLEdBQ3hCQyxJQUQyQixJQUVUO0VBQ2xCLE1BQU1DLEtBQW9CLEdBQUcsRUFBN0I7RUFFQUQsSUFBSSxFQUFFRSxHQUFOLENBQVdDLElBQUQsSUFBVUEsSUFBSSxJQUFJRixLQUFLLENBQUNHLElBQU4sQ0FBV0QsSUFBWCxDQUE1QjtFQUVBLE9BQU9GLEtBQVA7QUFDRCxDQVJEOztBQVVBLE1BQU1JLG9CQUFvQixHQUFHLENBQTdCO0FBQ0EsTUFBTUMsaUJBQWlCLEdBQUcsQ0FBMUI7O0FBRUEsTUFBTUMsUUFBUSxHQUFHLE1BQW1CO0VBQ2xDLE1BQU07SUFBQSxHQUFDQyxXQUFEO0lBQUEsR0FBY0M7RUFBZCxJQUFnQ3hCLCtDQUFRLENBQVNvQixvQkFBVCxDQUE5QztFQUNBLE1BQU07SUFBQSxHQUFDSyxRQUFEO0lBQUEsR0FBV0M7RUFBWCxJQUEwQjFCLCtDQUFRLENBQVNxQixpQkFBVCxDQUF4QztFQUVBLE1BQU07SUFBRU4sSUFBRjtJQUFRWTtFQUFSLElBQW9CMUIsd0RBQVEsQ0FBd0JRLHdEQUF4QixFQUFtQztJQUNuRW1CLFdBQVcsRUFBRSxtQkFEc0Q7SUFFbkVDLFNBQVMsRUFBRTtNQUNUQyxJQUFJLEVBQUUsWUFERztNQUVUQyxLQUFLLEVBQUU7SUFGRTtFQUZ3RCxDQUFuQyxDQUFsQzs7RUFRQSxNQUFNQyxrQkFBK0MsR0FBRyxDQUFDQyxJQUFELEVBQU9DLElBQVAsS0FBZ0I7SUFDdEUsSUFBSVgsV0FBVyxLQUFLVSxJQUFwQixFQUEwQjtNQUN4QlQsY0FBYyxDQUFDUyxJQUFELENBQWQ7SUFDRDs7SUFDRCxJQUFJUixRQUFRLEtBQUtTLElBQWpCLEVBQXVCO01BQ3JCUixXQUFXLENBQUNRLElBQUQsQ0FBWDtJQUNEO0VBQ0YsQ0FQRDs7RUFTQSxNQUFNbEIsS0FBSyxHQUFHRixvQkFBb0IsQ0FBQ0MsSUFBSSxFQUFFQyxLQUFQLENBQWxDO0VBRUE7QUFDRjtBQUNBO0FBQ0E7QUFDQTs7RUFDRSxNQUFNbUIsa0JBQWtCLEdBQUdwQyw4Q0FBTyxDQUFDLE1BQXFCO0lBQ3RELE1BQU1xQyxJQUFJLEdBQ1JiLFdBQVcsR0FBR0gsb0JBQWQsR0FBcUMsQ0FBQ0csV0FBVyxHQUFHLENBQWYsSUFBb0JFLFFBQXpELEdBQW9FLENBRHRFO0lBRUEsTUFBTVksRUFBRSxHQUFHZCxXQUFXLEdBQUdFLFFBQXpCO0lBRUEsT0FBT1QsS0FBSyxDQUFDc0IsS0FBTixDQUFZRixJQUFaLEVBQWtCQyxFQUFsQixDQUFQO0VBQ0QsQ0FOaUMsRUFNL0IsQ0FBQ3JCLEtBQUQsRUFBUU8sV0FBUixFQUFxQkUsUUFBckIsQ0FOK0IsQ0FBbEM7RUFRQSxNQUFNYyxlQUFlLEdBQUcsQ0FDdEJsQixpQkFEc0IsRUFFdEJBLGlCQUFpQixHQUFHLENBRkUsRUFHdEJBLGlCQUFpQixHQUFHLENBSEUsRUFJdEJBLGlCQUFpQixHQUFHLENBSkUsRUFLdEJBLGlCQUFpQixHQUFHLENBTEUsQ0FBeEI7RUFRQSxvQkFDRSw4REFBQyxzQ0FBRDtJQUFNLFNBQVMsRUFBRVYsbUVBQWpCO0lBQThCLFFBQVEsRUFBRWdCLE9BQXhDO0lBQWlELEdBQUcsRUFBQyxZQUFyRDtJQUFBLHVCQUNFLDhEQUFDLHVDQUFEO01BQU8sU0FBUyxFQUFFaEIsc0VBQWxCO01BQWtDLFNBQVMsRUFBQyxVQUE1QztNQUF1RCxJQUFJLEVBQUMsUUFBNUQ7TUFBQSx3QkFDRSw4REFBQyxLQUFEO1FBQUE7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBLGFBREYsRUFHRyxDQUFDZ0IsT0FBRCxJQUFZUSxrQkFBa0IsQ0FBQ08sTUFBbkIsSUFBNkIsQ0FBekMsZ0JBQ0MsOERBQUMsdUNBQUQ7UUFDRSxTQUFTLEVBQUUvQiwyRUFEYjtRQUVFLFNBQVMsRUFBQyxVQUZaO1FBR0UsS0FBSyxFQUFDLFFBSFI7UUFBQSx1QkFLRSw4REFBQyx1Q0FBRDtVQUFBO1VBQUE7VUFBQTtRQUFBO01BTEY7UUFBQTtRQUFBO1FBQUE7TUFBQSxhQURELGdCQVNDO1FBQUEsd0JBQ0UsOERBQUMsMEZBQUQ7VUFBVyxLQUFLLEVBQUV3QjtRQUFsQjtVQUFBO1VBQUE7VUFBQTtRQUFBLGFBREYsZUFHRSw4REFBQyw0Q0FBRDtVQUNFLFFBQVEsRUFBRUgsa0JBRFo7VUFFRSxlQUFlLEVBQUVPLGVBRm5CO1VBR0UsY0FBYyxFQUFFbkIsb0JBSGxCO1VBSUUsZUFBZSxFQUFFQyxpQkFKbkI7VUFLRSxLQUFLLEVBQUVMLEtBQUssQ0FBQzBCLE1BTGY7VUFNRSxRQUFRLEVBQUUsQ0FBQzFCLEtBQUssQ0FBQzBCLE1BQVAsSUFBaUJmLE9BTjdCO1VBT0UsZUFBZSxNQVBqQjtVQVFFLGVBQWU7UUFSakI7VUFBQTtVQUFBO1VBQUE7UUFBQSxhQUhGO01BQUEsZ0JBWko7SUFBQTtNQUFBO01BQUE7TUFBQTtJQUFBO0VBREY7SUFBQTtJQUFBO0lBQUE7RUFBQSxhQURGO0FBZ0NELENBNUVEOztBQThFQSxpRUFBZUwsUUFBZiIsInNvdXJjZXMiOlsid2VicGFjazovL25leHRqc19wbGF5Z3JvdW5kLy4vY29tcG9uZW50cy9Ib21lUGFnZS9Ib21lUGFnZS50c3g/ODUxNCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VNZW1vLCB1c2VTdGF0ZSB9IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7IHVzZVF1ZXJ5IH0gZnJvbSAnQGFwb2xsby9jbGllbnQnO1xuaW1wb3J0IGRheWpzIGZyb20gJ2RheWpzJztcbmltcG9ydCBsb2NhbGl6ZWRGb3JtYXQgZnJvbSAnZGF5anMvcGx1Z2luL2xvY2FsaXplZEZvcm1hdCc7XG5pbXBvcnQge1xuICBTcGluLFxuICBTcGFjZSxcbiAgRW1wdHksXG4gIFR5cG9ncmFwaHksXG4gIFBhZ2luYXRpb24sXG4gIFBhZ2luYXRpb25Qcm9wcyxcbn0gZnJvbSAnYW50ZCc7XG4vLyBBcGlcbmltcG9ydCB7IEdFVF9TSElQUyB9IGZyb20gJ2FwaS9zaGlwcy9xdWVyaWVzJztcbi8vIFR5cGVzXG5pbXBvcnQgeyBTaGlwcywgU2hpcHNfc2hpcHMsIFNoaXBzVmFyaWFibGVzIH0gZnJvbSAnYXBpL3NoaXBzL3R5cGVzL1NoaXBzJztcbi8vIENvbXBvbmVudHNcbmltcG9ydCBTaGlwc0xpc3QgZnJvbSAnY29tcG9uZW50cy9Ib21lUGFnZS9jb21wb25lbnRzL1NoaXBzTGlzdC9TaGlwc0xpc3QnO1xuLy8gU3R5bGVzXG5pbXBvcnQgc3R5bGVzIGZyb20gJy4vSG9tZVBhZ2UubW9kdWxlLnNjc3MnO1xuXG5kYXlqcy5leHRlbmQobG9jYWxpemVkRm9ybWF0KTtcblxuY29uc3QgeyBUaXRsZSB9ID0gVHlwb2dyYXBoeTtcblxuY29uc3QgZ2V0RXhpc3RpbmdTaGlwc0xpc3QgPSAoXG4gIGRhdGE6IChTaGlwc19zaGlwcyB8IG51bGwpW10gfCBudWxsIHwgdW5kZWZpbmVkXG4pOiBTaGlwc19zaGlwc1tdID0+IHtcbiAgY29uc3Qgc2hpcHM6IFNoaXBzX3NoaXBzW10gPSBbXTtcblxuICBkYXRhPy5tYXAoKHNoaXApID0+IHNoaXAgJiYgc2hpcHMucHVzaChzaGlwKSk7XG5cbiAgcmV0dXJuIHNoaXBzO1xufTtcblxuY29uc3QgREVGQVVMVF9DVVJSRU5UX1BBR0UgPSAxO1xuY29uc3QgREVGQVVMVF9QQUdFX1NJWkUgPSAzO1xuXG5jb25zdCBIb21lUGFnZSA9ICgpOiBKU1guRWxlbWVudCA9PiB7XG4gIGNvbnN0IFtjdXJyZW50UGFnZSwgc2V0Q3VycmVudFBhZ2VdID0gdXNlU3RhdGU8bnVtYmVyPihERUZBVUxUX0NVUlJFTlRfUEFHRSk7XG4gIGNvbnN0IFtwYWdlU2l6ZSwgc2V0UGFnZVNpemVdID0gdXNlU3RhdGU8bnVtYmVyPihERUZBVUxUX1BBR0VfU0laRSk7XG5cbiAgY29uc3QgeyBkYXRhLCBsb2FkaW5nIH0gPSB1c2VRdWVyeTxTaGlwcywgU2hpcHNWYXJpYWJsZXM+KEdFVF9TSElQUywge1xuICAgIGZldGNoUG9saWN5OiAnY2FjaGUtYW5kLW5ldHdvcmsnLFxuICAgIHZhcmlhYmxlczoge1xuICAgICAgc29ydDogJ3llYXJfYnVpbHQnLFxuICAgICAgb3JkZXI6ICdkZXNjZW5kaW5nJyxcbiAgICB9LFxuICB9KTtcblxuICBjb25zdCBvblBhZ2luYXRpb25DaGFuZ2U6IFBhZ2luYXRpb25Qcm9wc1snb25DaGFuZ2UnXSA9IChwYWdlLCBzaXplKSA9PiB7XG4gICAgaWYgKGN1cnJlbnRQYWdlICE9PSBwYWdlKSB7XG4gICAgICBzZXRDdXJyZW50UGFnZShwYWdlKTtcbiAgICB9XG4gICAgaWYgKHBhZ2VTaXplICE9PSBzaXplKSB7XG4gICAgICBzZXRQYWdlU2l6ZShzaXplKTtcbiAgICB9XG4gIH07XG5cbiAgY29uc3Qgc2hpcHMgPSBnZXRFeGlzdGluZ1NoaXBzTGlzdChkYXRhPy5zaGlwcyk7XG5cbiAgLyoqXG4gICAqIFdlIHNob3VsZCBoYW5kbGUgdGhlIHBhZ2luYXRpb24gb24gdGhlIGZyb250ZW5kIHNpZGUsXG4gICAqIGNveiB0aGVyZSdzIG5vIHdheSB0byBnZXQgdGhlIHRvdGFsIG51bWJlciBvZiBzaGlwcyxcbiAgICogYW5kIHRodXMgLSBtYWtlIHRoZSBwcm9wZXIgcGFnaW5hdGlvblxuICAgKiovXG4gIGNvbnN0IHBhZ2luYXRlZFNoaXBzTGlzdCA9IHVzZU1lbW8oKCk6IFNoaXBzX3NoaXBzW10gPT4ge1xuICAgIGNvbnN0IGZyb20gPVxuICAgICAgY3VycmVudFBhZ2UgPiBERUZBVUxUX0NVUlJFTlRfUEFHRSA/IChjdXJyZW50UGFnZSAtIDEpICogcGFnZVNpemUgOiAwO1xuICAgIGNvbnN0IHRvID0gY3VycmVudFBhZ2UgKiBwYWdlU2l6ZTtcblxuICAgIHJldHVybiBzaGlwcy5zbGljZShmcm9tLCB0byk7XG4gIH0sIFtzaGlwcywgY3VycmVudFBhZ2UsIHBhZ2VTaXplXSk7XG5cbiAgY29uc3QgcGFnZVNpemVPcHRpb25zID0gW1xuICAgIERFRkFVTFRfUEFHRV9TSVpFLFxuICAgIERFRkFVTFRfUEFHRV9TSVpFICogMixcbiAgICBERUZBVUxUX1BBR0VfU0laRSAqIDMsXG4gICAgREVGQVVMVF9QQUdFX1NJWkUgKiA0LFxuICAgIERFRkFVTFRfUEFHRV9TSVpFICogOCxcbiAgXTtcblxuICByZXR1cm4gKFxuICAgIDxTcGluIGNsYXNzTmFtZT17c3R5bGVzLnJvb3R9IHNwaW5uaW5nPXtsb2FkaW5nfSB0aXA9XCJMb2FkaW5nLi4uXCI+XG4gICAgICA8U3BhY2UgY2xhc3NOYW1lPXtzdHlsZXMuY29udGVudH0gZGlyZWN0aW9uPVwidmVydGljYWxcIiBzaXplPVwibWlkZGxlXCI+XG4gICAgICAgIDxUaXRsZT5UaGUgbGlzdCBvZiBTcGFzZVggc2hpcHM8L1RpdGxlPlxuXG4gICAgICAgIHshbG9hZGluZyAmJiBwYWdpbmF0ZWRTaGlwc0xpc3QubGVuZ3RoIDw9IDAgPyAoXG4gICAgICAgICAgPFNwYWNlXG4gICAgICAgICAgICBjbGFzc05hbWU9e3N0eWxlcy5lbXB0eVdyYXBwZXJ9XG4gICAgICAgICAgICBkaXJlY3Rpb249XCJ2ZXJ0aWNhbFwiXG4gICAgICAgICAgICBhbGlnbj1cImNlbnRlclwiXG4gICAgICAgICAgPlxuICAgICAgICAgICAgPEVtcHR5IC8+XG4gICAgICAgICAgPC9TcGFjZT5cbiAgICAgICAgKSA6IChcbiAgICAgICAgICA8PlxuICAgICAgICAgICAgPFNoaXBzTGlzdCBzaGlwcz17cGFnaW5hdGVkU2hpcHNMaXN0fSAvPlxuXG4gICAgICAgICAgICA8UGFnaW5hdGlvblxuICAgICAgICAgICAgICBvbkNoYW5nZT17b25QYWdpbmF0aW9uQ2hhbmdlfVxuICAgICAgICAgICAgICBwYWdlU2l6ZU9wdGlvbnM9e3BhZ2VTaXplT3B0aW9uc31cbiAgICAgICAgICAgICAgZGVmYXVsdEN1cnJlbnQ9e0RFRkFVTFRfQ1VSUkVOVF9QQUdFfVxuICAgICAgICAgICAgICBkZWZhdWx0UGFnZVNpemU9e0RFRkFVTFRfUEFHRV9TSVpFfVxuICAgICAgICAgICAgICB0b3RhbD17c2hpcHMubGVuZ3RofVxuICAgICAgICAgICAgICBkaXNhYmxlZD17IXNoaXBzLmxlbmd0aCB8fCBsb2FkaW5nfVxuICAgICAgICAgICAgICBzaG93U2l6ZUNoYW5nZXJcbiAgICAgICAgICAgICAgc2hvd1F1aWNrSnVtcGVyXG4gICAgICAgICAgICAvPlxuICAgICAgICAgIDwvPlxuICAgICAgICApfVxuICAgICAgPC9TcGFjZT5cbiAgICA8L1NwaW4+XG4gICk7XG59O1xuXG5leHBvcnQgZGVmYXVsdCBIb21lUGFnZTtcbiJdLCJuYW1lcyI6WyJ1c2VNZW1vIiwidXNlU3RhdGUiLCJ1c2VRdWVyeSIsImRheWpzIiwibG9jYWxpemVkRm9ybWF0IiwiU3BpbiIsIlNwYWNlIiwiRW1wdHkiLCJUeXBvZ3JhcGh5IiwiUGFnaW5hdGlvbiIsIkdFVF9TSElQUyIsIlNoaXBzTGlzdCIsInN0eWxlcyIsImV4dGVuZCIsIlRpdGxlIiwiZ2V0RXhpc3RpbmdTaGlwc0xpc3QiLCJkYXRhIiwic2hpcHMiLCJtYXAiLCJzaGlwIiwicHVzaCIsIkRFRkFVTFRfQ1VSUkVOVF9QQUdFIiwiREVGQVVMVF9QQUdFX1NJWkUiLCJIb21lUGFnZSIsImN1cnJlbnRQYWdlIiwic2V0Q3VycmVudFBhZ2UiLCJwYWdlU2l6ZSIsInNldFBhZ2VTaXplIiwibG9hZGluZyIsImZldGNoUG9saWN5IiwidmFyaWFibGVzIiwic29ydCIsIm9yZGVyIiwib25QYWdpbmF0aW9uQ2hhbmdlIiwicGFnZSIsInNpemUiLCJwYWdpbmF0ZWRTaGlwc0xpc3QiLCJmcm9tIiwidG8iLCJzbGljZSIsInBhZ2VTaXplT3B0aW9ucyIsInJvb3QiLCJjb250ZW50IiwibGVuZ3RoIiwiZW1wdHlXcmFwcGVyIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./components/HomePage/HomePage.tsx\n");</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ }),</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ "./components/HomePage/components/ShipsList/ShipsList.tsx":</span>
+<span class="cstat-no" title="statement not covered" >/*!****************************************************************!*\</span>
+<span class="cstat-no" title="statement not covered" >  !*** ./components/HomePage/components/ShipsList/ShipsList.tsx ***!</span>
+<span class="cstat-no" title="statement not covered" >  \****************************************************************/</span>
+<span class="cstat-no" title="statement not covered" >/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >"use strict";</span>
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () =&gt; (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd */ \"antd\");\n/* harmony import */ var antd__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ShipsList_module_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ShipsList.module.scss */ \"./components/HomePage/components/ShipsList/ShipsList.module.scss\");\n/* harmony import */ var _ShipsList_module_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_ShipsList_module_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__);\nvar _jsxFileName = \"/Users/odarka/Sites/Litslink_Prpjects/Kofaka/nextjs_playground_gitlab/components/HomePage/components/ShipsList/ShipsList.tsx\";\n // Types\n\n// Styles\n\n\nconst {\n  Meta\n} = antd__WEBPACK_IMPORTED_MODULE_0__.Card;\n\nconst ShipsList = ({\n  ships\n}) =&gt; {\n  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)(antd__WEBPACK_IMPORTED_MODULE_0__.Row, {\n    className: (_ShipsList_module_scss__WEBPACK_IMPORTED_MODULE_2___default().root),\n    gutter: {\n      xs: 8,\n      sm: 16,\n      md: 24\n    },\n    align: \"stretch\",\n    justify: \"center\",\n    children: ships.map(({\n      name,\n      image,\n      status\n    }, index) =&gt; /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)(antd__WEBPACK_IMPORTED_MODULE_0__.Col, {\n      xs: 24,\n      sm: 16,\n      md: 8,\n      children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)(antd__WEBPACK_IMPORTED_MODULE_0__.Card, {\n        cover: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)(antd__WEBPACK_IMPORTED_MODULE_0__.Image, {\n          alt: name || 'The ship',\n          src: image || '',\n          preview: image ? {\n            src: image\n          } : false,\n          fallback: \"data:image/png;base64,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\"\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 25,\n          columnNumber: 15\n        }, undefined),\n        hoverable: !!image,\n        children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxDEV)(Meta, {\n          title: name || 'The ship',\n          description: status\n        }, void 0, false, {\n          fileName: _jsxFileName,\n          lineNumber: 34,\n          columnNumber: 13\n        }, undefined)\n      }, void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 23,\n        columnNumber: 11\n      }, undefined)\n    }, index, false, {\n      fileName: _jsxFileName,\n      lineNumber: 22,\n      columnNumber: 9\n    }, undefined))\n  }, void 0, false, {\n    fileName: _jsxFileName,\n    lineNumber: 15,\n    columnNumber: 5\n  }, undefined);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ShipsList);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0hvbWVQYWdlL2NvbXBvbmVudHMvU2hpcHNMaXN0L1NoaXBzTGlzdC50c3guanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Q0FDQTs7QUFFQTtBQUNBOztBQUVBLE1BQU07RUFBRUs7QUFBRixJQUFXSCxzQ0FBakI7O0FBTUEsTUFBTUksU0FBUyxHQUFHLENBQUM7RUFBRUM7QUFBRixDQUFELEtBQStCO0VBQy9DLG9CQUNFLDhEQUFDLHFDQUFEO0lBQ0UsU0FBUyxFQUFFSCxvRUFEYjtJQUVFLE1BQU0sRUFBRTtNQUFFSyxFQUFFLEVBQUUsQ0FBTjtNQUFTQyxFQUFFLEVBQUUsRUFBYjtNQUFpQkMsRUFBRSxFQUFFO0lBQXJCLENBRlY7SUFHRSxLQUFLLEVBQUMsU0FIUjtJQUlFLE9BQU8sRUFBQyxRQUpWO0lBQUEsVUFNR0osS0FBSyxDQUFDSyxHQUFOLENBQVUsQ0FBQztNQUFFQyxJQUFGO01BQVFDLEtBQVI7TUFBZUM7SUFBZixDQUFELEVBQTBCQyxLQUExQixrQkFDVCw4REFBQyxxQ0FBRDtNQUFpQixFQUFFLEVBQUUsRUFBckI7TUFBeUIsRUFBRSxFQUFFLEVBQTdCO01BQWlDLEVBQUUsRUFBRSxDQUFyQztNQUFBLHVCQUNFLDhEQUFDLHNDQUFEO1FBQ0UsS0FBSyxlQUNILDhEQUFDLHVDQUFEO1VBQ0UsR0FBRyxFQUFFSCxJQUFJLElBQUksVUFEZjtVQUVFLEdBQUcsRUFBRUMsS0FBSyxJQUFJLEVBRmhCO1VBR0UsT0FBTyxFQUFFQSxLQUFLLEdBQUc7WUFBRUcsR0FBRyxFQUFFSDtVQUFQLENBQUgsR0FBb0IsS0FIcEM7VUFJRSxRQUFRLEVBQUM7UUFKWDtVQUFBO1VBQUE7VUFBQTtRQUFBLGFBRko7UUFTRSxTQUFTLEVBQUUsQ0FBQyxDQUFDQSxLQVRmO1FBQUEsdUJBV0UsOERBQUMsSUFBRDtVQUFNLEtBQUssRUFBRUQsSUFBSSxJQUFJLFVBQXJCO1VBQWlDLFdBQVcsRUFBRUU7UUFBOUM7VUFBQTtVQUFBO1VBQUE7UUFBQTtNQVhGO1FBQUE7UUFBQTtRQUFBO01BQUE7SUFERixHQUFVQyxLQUFWO01BQUE7TUFBQTtNQUFBO0lBQUEsYUFERDtFQU5IO0lBQUE7SUFBQTtJQUFBO0VBQUEsYUFERjtBQTBCRCxDQTNCRDs7QUE2QkEsaUVBQWVWLFNBQWYiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9uZXh0anNfcGxheWdyb3VuZC8uL2NvbXBvbmVudHMvSG9tZVBhZ2UvY29tcG9uZW50cy9TaGlwc0xpc3QvU2hpcHNMaXN0LnRzeD9mZTE4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENvbCwgUm93LCBDYXJkLCBJbWFnZSB9IGZyb20gJ2FudGQnO1xuLy8gVHlwZXNcbmltcG9ydCB7IFNoaXBzX3NoaXBzIH0gZnJvbSAnYXBpL3NoaXBzL3R5cGVzL1NoaXBzJztcbi8vIFN0eWxlc1xuaW1wb3J0IHN0eWxlcyBmcm9tICcuL1NoaXBzTGlzdC5tb2R1bGUuc2Nzcyc7XG5cbmNvbnN0IHsgTWV0YSB9ID0gQ2FyZDtcblxudHlwZSBTaGlwc0xpc3RQcm9wcyA9IHtcbiAgc2hpcHM6IFNoaXBzX3NoaXBzW107XG59O1xuXG5jb25zdCBTaGlwc0xpc3QgPSAoeyBzaGlwcyB9OiBTaGlwc0xpc3RQcm9wcykgPT4ge1xuICByZXR1cm4gKFxuICAgIDxSb3dcbiAgICAgIGNsYXNzTmFtZT17c3R5bGVzLnJvb3R9XG4gICAgICBndXR0ZXI9e3sgeHM6IDgsIHNtOiAxNiwgbWQ6IDI0IH19XG4gICAgICBhbGlnbj1cInN0cmV0Y2hcIlxuICAgICAganVzdGlmeT1cImNlbnRlclwiXG4gICAgPlxuICAgICAge3NoaXBzLm1hcCgoeyBuYW1lLCBpbWFnZSwgc3RhdHVzIH0sIGluZGV4KSA9PiAoXG4gICAgICAgIDxDb2wga2V5PXtpbmRleH0geHM9ezI0fSBzbT17MTZ9IG1kPXs4fT5cbiAgICAgICAgICA8Q2FyZFxuICAgICAgICAgICAgY292ZXI9e1xuICAgICAgICAgICAgICA8SW1hZ2VcbiAgICAgICAgICAgICAgICBhbHQ9e25hbWUgfHwgJ1RoZSBzaGlwJ31cbiAgICAgICAgICAgICAgICBzcmM9e2ltYWdlIHx8ICcnfVxuICAgICAgICAgICAgICAgIHByZXZpZXc9e2ltYWdlID8geyBzcmM6IGltYWdlIH0gOiBmYWxzZX1cbiAgICAgICAgICAgICAgICBmYWxsYmFjaz1cImRhdGE6aW1hZ2UvcG5nO2Jhc2U2NCxpVkJPUncwS0dnb0FBQUFOU1VoRVVnQUFBTUlBQUFERENBWUFBQURRdmM2VUFBQUJSV2xEUTFCSlEwTWdVSEp2Wm1sc1pRQUFLSkZqWUdBU1NTd295R0ZoWUdESXpTc3BDbkozVW9pSWpGSmdmOExBd1NEQ0lNb2d3TUNjbUZ4YzRCZ1E0QU5Vd2dDalVjRzNhd3lNSVBxeUxzaXM3UFBPcTNRZERGY3ZqVjNqT0QxYm9RVlRQUXJnU2trdFRnYlNmNEE0TGJtZ3FJU0JnVEVGeUZZdUx5a0FzVHVBYkpFaW9LT0E3RGtnZGpxRXZRSEVUb0t3ajREVmhBUTVBOWszZ0d5QjVJeEVvQm1NTDRCc25TUWs4WFFrTnRSZUVPQnhjZlh4VVFnMU1qYzBkeUhnWE5KQlNXcEZDWWgyemkrb0xNcE16eWhSY0FTR1VxcUNaMTZ5bm82Q2tZR1JBUU1ES013aHFqL2ZBSWNsb3hnSFFxeEFqSUhCRXVndzVzVUlzU1FwQm9idFFQZExjaUxFVkpZek1QQkhNREJzYXloSUxFcUVPNER4RzB0eG1yRVJoTTI5bllHQmRkci8vNS9ER1JqWU5Sa1kvbDcvLy8vMzl2Ly8veTREbW4rTGdlSEFOd0Rya2wxQXVPK3BtZ0FBQURobFdFbG1UVTBBS2dBQUFBZ0FBWWRwQUFRQUFBQUJBQUFBR2dBQUFBQUFBcUFDQUFRQUFBQUJBQUFBd3FBREFBUUFBQUFCQUFBQXd3QUFBQUQ5Yi9IbkFBQUhsa2xFUVZSNEFlM2RQM1BUV0JTR2NiR3pNNkdDS3FsSUJSVjBkSFJKRmFyUTBlVVQ4TEg0Qm5SVTBOSFIwVUVGVmRJbEZSVjdUelJrc29tUFk4dXlrVGsvemV3UWZLdy85em52NHl2SnluTHY0dUxpVjJkQm9EaUJmNHFQMy9BUnVDUkFCRUZBb0JFZ2doZ2dRQVFaUUtBbllFYVFCQVFhQVNLSUFRSkVrQUVFZWdKbUJFbEFvQkVnZ2hnZ1FBUVpRS0FuWUVhUUJBUWFBU0tJQVFKRWtBRUVlZ0ptQkVsQW9CRWdnaGdnUUFRWlFLQW5ZRWFRQkFRYUFTS0lBUUpFa0FFRWVnSm1CRWxBb0JFZ2doZ2dRQVFaUUtBbllFYVFCQVFhQVNLSUFRSkVrQUVFZWdKbUJFbEFvQkVnZ2hnZ1FBUVpRS0FuWUVhUUJBUWFBU0tJQVFKRWtBRUVlZ0ptQkVsQW9CRWdnaGdnUUFRWlFLQW5ZRWFRQkFRYUFTS0lBUUpFa0FFRWVnSm1CRWxBb0JFZ2doZ2dRQVFaUUtBbllFYVFCQVFhQVNLSUFRSkVrQUVFZWdKbUJFbEFvQkVnZ2hnZ1FBUVpRS0FuWUVhUUJBUWFBU0tJQVFKRWtBRUVlZ0ptQkVsQW9CRWdnaGdnUUFRWlFLQW5ZRWFRQkFRYUFTS0lBUUpFa0FFRWVnSm1CRWxBb0JFZ2doZ2dRQVFaUUtBbllFYVFCQVFhQVNLSUFRSkVrQUVFZWdKbUJFbEFvQkVnZ2hnZ1FBUVpRS0FuWUVhUUJBUWFBU0tJQVFKRWtBRUVlZ0ptQkVsQW9CRWdnaGdnUUFRWlFLQW5ZRWFRQkFRYUFTS0lBUUpFa0FFRWVnSm1CRWxBb0JFZ2doZ2cwQWo4aTBKTzRPenNyUHY2OVd2K2hpMnFQSHIwcU52ZjM5K2lJOTdzb1JJaDRmM3o1OC91N2R1M1NYWDdYdDdaMmVuZXZIbXpmUWUrb1NOMmFwU0FQajA5VFNyYitYS0kvZjM3OSswOCtBMGNOUkUyQU5rdXBrK0FDTlB2a1NQY0FBRWliQUN5WFV5ZkFCR20zeU5IdUFFQ1JOZ0FaTHVZUGdFaXJLbEh1N3U3WGR5eXRHd0hBZDhqak55bmc0T0Q3dm56NTFkYlBUOC83ejU4K05COSsvYnQ2alUvVEkrQUdXSEVucng0OGVKL0VzU21Ieng0MEwxOCtmTHl6eEYzWlZNakV5RENpRURqTVlaWlM1d2lQWG55WkZiSmF4TWhRSVFSR3pIdldSN1hDeU9DWHNPbWlEQWkxSG1QTU1RakRwYnBFaURDaUwzNThlTkh1clcvNVNuV2RJQmJYaURDaUEzOC9QbnpyY2UyWXlaNC8vNTlGM2VQTE5NbDRQYnBpTDJKMEw5NzkrN3lEdEhEaHc4dnR6enZkR25FWGR2VWlnU0lzQ0xBV2F2SHAvK3FNMEJjWE1kL3EyNW4xdkY1N1RZQnAwYTNtVXppbGVQajQrN2s1S1NMYjZndDZ5ZEFoUFV6WG5vUFIwZEhsNzlXR1ROQ2ZCbm4xdXZTQ0pkZWdRaExJMXZ2Q2srZlB1MmVQWHQydFpPWUVWNi9mbjMxZHorc2h3QVIxc1AxY3F2TG50YkVOOU14QTl4Y1lqc3hTMWpXUjRBSWEySWJ6eDB0YzQ0ZllYLzE2bFY2TkRGTFhIK1lMMzJqd2lBQ1JCaUViZjVLY1hvVElzUVNwelh4NE4yOEphNEJRb0s3cmdYaXlkYkhqeC9QMjVUYVFBSkVHQWd1V3kwKzJROFBENi9LaTRSOEVWbCtiekJPblpZOTVmcTlyajl6QWtUSTJTeGRpZEJIcUc5K3NrZHc0M2JvckNYTy9aY0pkcmFQV2R2MjJ1SUVpTEE0cTdudnZDdWc4V1RxelF2ZU9IMjZmb2RvN2c2dUZlL2ExN1czK25GQkFrUllFTlJkYjF2a2t6MUNIOWNQc1Z5L2pyaHIyN1BxTVl2RU5ZTmxIQUllc1JpQll3UnkwVis4aVhQOCsvZnZYMTFNcjdMN0VDdWViL3I0OGVNcW03RnVJMkJHV0RFRzhjbSs3RzNORU9mbWRjVFF3NGg5LzU1bGhtN0Rla1JZS1FQWkYyQXJiWFRBeXU0a0RZQjJZeFV6d2cwZ2kvNDF6dEhuZlFHMjZIYkdlbC9jclZybTd0TlkrLzFidGtPRUFaMk0wNXI0RkI3cjlHYkFJZHhhWllySGRPc2dKL3dDRVFZMEo3NFRtT0tuYnh4VDluM0ZnR0dXV3NWZG93SHRqdDlObnZmN3lRTTJhWlUvVElBSUF4cnc2ZE9uQVd0Wlpjb0VuQnBOdVR1T2JXTUVpTEF4MUhZMFpRSkVtSEozSE52R0NCQmhZNmp0YU1vRWlKQjBaMjl2TDZsczU4dnhQY084L3pmcmRvNXF2S08rZDNGeDhXdTh6ZjFkVzRwL2NQekxseS9kdHY5VHMvRWJjdkdBSGhIeWZCSWhaNk5TaUlCVG8wTE5OdFNjQUJGeU5pcUZDQkNoVUxNTk5TZEFoSnlOU2lFQ1JDalViRVBOQ1JBaFo2TlNpQUFSQ2pYYlVITUNSTWpacUJRaVFJUkN6VGJVbkFBUmNqWXFoUWdRb1ZDekRUVW5RSVNjalVvaEFrUW8xR3hEelFrUUlXZWpVb2dBRVFvMTIxQnpBa1RJMmFnVUlrQ0VRczAyMUp3QUVYSTJLb1VJRUtGUXN3MDFKMENFbkkxS0lRSkVLTlJzUTgwSkVDRm5vMUtJQUJFS05kdFFjd0pFeU5tb0ZDSkFoRUxOTnRTY0FCRnlOaXFGQ0JDaFVMTU5OU2RBaEp5TlNpRUNSQ2pVYkVQTkNSQWhaNk5TaUFBUkNqWGJVSE1DUk1qWnFCUWlRSVJDelRiVW5BQVJjallxaFFnUW9WQ3pEVFVuUUlTY2pVb2hBa1FvMUd4RHpRa1FJV2VqVW9nQUVRbzEyMUJ6QWtUSTJhZ1VJa0NFUXMwMjFKd0FFWEkyS29VSUVLRlFzdzAxSjBDRW5JMUtJUUpFS05Sc1E4MEpFQ0ZubzFLSUFCRUtOZHRRY3dKRXlObW9GQ0pBaEVMTk50U2NBQkZ5TmlxRkNCQ2hVTE1OTlNkQWhKeU5TaUVDUkNqVWJFUE5DUkFoWjZOU2lBQVJDalhiVUhNQ1JNalpxQlFpUUlSQ3pUYlVuQUFSY2pZcWhRZ1FvVkN6RFRVblFJU2NqVW9oQWtRbzFHeER6UWtRSVdlalVvZ0FFUW8xMjFCekFrVEkyYWdVSWtDRVFzMDIxSndBRVhJMktvVUlFS0ZRc3cwMUowQ0VuSTFLSVFKRUtOUnNRODBKRUNGbm8xS0lBQkVLTmR0UWN3SkV5Tm1vRkNKQWhFTE5OdFNjQUJGeU5pcUZDQkNoVUxNTk5TZEFoSnlOU2lFQy93R2dLS0M0WU1BNFRBQUFBQUJKUlU1RXJrSmdnZz09XCJcbiAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIGhvdmVyYWJsZT17ISFpbWFnZX1cbiAgICAgICAgICA+XG4gICAgICAgICAgICA8TWV0YSB0aXRsZT17bmFtZSB8fCAnVGhlIHNoaXAnfSBkZXNjcmlwdGlvbj17c3RhdHVzfSAvPlxuICAgICAgICAgIDwvQ2FyZD5cbiAgICAgICAgPC9Db2w+XG4gICAgICApKX1cbiAgICA8L1Jvdz5cbiAgKTtcbn07XG5cbmV4cG9ydCBkZWZhdWx0IFNoaXBzTGlzdDtcbiJdLCJuYW1lcyI6WyJDb2wiLCJSb3ciLCJDYXJkIiwiSW1hZ2UiLCJzdHlsZXMiLCJNZXRhIiwiU2hpcHNMaXN0Iiwic2hpcHMiLCJyb290IiwieHMiLCJzbSIsIm1kIiwibWFwIiwibmFtZSIsImltYWdlIiwic3RhdHVzIiwiaW5kZXgiLCJzcmMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./components/HomePage/components/ShipsList/ShipsList.tsx\n");</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ }),</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ "./constants/api.ts":</span>
+<span class="cstat-no" title="statement not covered" >/*!**************************!*\</span>
+<span class="cstat-no" title="statement not covered" >  !*** ./constants/api.ts ***!</span>
+<span class="cstat-no" title="statement not covered" >  \**************************/</span>
+<span class="cstat-no" title="statement not covered" >/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >"use strict";</span>
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"NEXT_PUBLIC_API_HOST\": () =&gt; (/* binding */ NEXT_PUBLIC_API_HOST)\n/* harmony export */ });\nconst NEXT_PUBLIC_API_HOST = 'https://api.spacex.land/graphql/';//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb25zdGFudHMvYXBpLnRzLmpzIiwibWFwcGluZ3MiOiI7Ozs7QUFBTyxNQUFNQSxvQkFBb0IsR0FBRyxrQ0FBN0IiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9uZXh0anNfcGxheWdyb3VuZC8uL2NvbnN0YW50cy9hcGkudHM/MDdmZCJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgY29uc3QgTkVYVF9QVUJMSUNfQVBJX0hPU1QgPSAnaHR0cHM6Ly9hcGkuc3BhY2V4LmxhbmQvZ3JhcGhxbC8nO1xuIl0sIm5hbWVzIjpbIk5FWFRfUFVCTElDX0FQSV9IT1NUIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./constants/api.ts\n");</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ }),</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ "./hocs/withApollo.tsx":</span>
+<span class="cstat-no" title="statement not covered" >/*!*****************************!*\</span>
+<span class="cstat-no" title="statement not covered" >  !*** ./hocs/withApollo.tsx ***!</span>
+<span class="cstat-no" title="statement not covered" >  \*****************************/</span>
+<span class="cstat-no" title="statement not covered" >/***/ ((module, __webpack_exports__, __webpack_require__) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >"use strict";</span>
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) =&gt; { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () =&gt; (__WEBPACK_DEFAULT_EXPORT__),\n/* harmony export */   \"errorLink\": () =&gt; (/* binding */ errorLink)\n/* harmony export */ });\n/* harmony import */ var next_with_apollo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next-with-apollo */ \"next-with-apollo\");\n/* harmony import */ var next_with_apollo__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_with_apollo__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var apollo_upload_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! apollo-upload-client */ \"apollo-upload-client\");\n/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @apollo/client */ \"@apollo/client\");\n/* harmony import */ var _apollo_client__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_apollo_client__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _apollo_client_link_error__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @apollo/client/link/error */ \"@apollo/client/link/error\");\n/* harmony import */ var _apollo_client_link_error__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_apollo_client_link_error__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var constants_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! constants/api */ \"./constants/api.ts\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__);\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([apollo_upload_client__WEBPACK_IMPORTED_MODULE_1__]);\napollo_upload_client__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\nvar _jsxFileName = \"/Users/odarka/Sites/Litslink_Prpjects/Kofaka/nextjs_playground_gitlab/hocs/withApollo.tsx\";\n\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly &amp;&amp; (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i &lt; arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\n\n // Types\n\n// Constants\n // using \"Capsules\" &amp; \"CapsulesVariables\" types as an example of a regular paginated query\n\n\n\nconst merge = (existing, incoming, {\n  args\n}) =&gt; {\n  const existingEntities = existing?.capsules || [];\n  const incomingEntities = incoming?.capsules || [];\n  const result = [...existingEntities, ...incomingEntities];\n\n  if (args &amp;&amp; !args?.offset) {\n    // Initial fetch or refetch\n    return incoming;\n  } // Pagination\n\n\n  return _objectSpread(_objectSpread({}, incoming), {}, {\n    entities: result\n  });\n};\n\nconst errorLink = (0,_apollo_client_link_error__WEBPACK_IMPORTED_MODULE_3__.onError)(({\n  graphQLErrors,\n  networkError\n}) =&gt; {\n  if (graphQLErrors) {\n    graphQLErrors.map(({\n      message\n    }) =&gt; {\n      console.log(`[GraphQL error]: ${message}`);\n    });\n  }\n\n  if (networkError) {\n    const errorMessage = typeof networkError === 'string' ? networkError : JSON.stringify(networkError);\n    console.log(`[Network error]: ${errorMessage}`);\n  }\n});\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (next_with_apollo__WEBPACK_IMPORTED_MODULE_0___default()(({\n  initialState,\n  headers,\n  ctx\n}) =&gt; {\n  // graphql config\n  const authLink = new _apollo_client__WEBPACK_IMPORTED_MODULE_2__.ApolloLink((operation, forward) =&gt; {\n    operation.setContext(({\n      headers: operationHeaders = {}\n    }) =&gt; {\n      return {\n        headers: _objectSpread({}, operationHeaders)\n      };\n    });\n    return forward(operation).map(response =&gt; {\n      // redirect to original slug if backend send a redirect slug value\n      if (true) {\n        const context = operation.getContext();\n        const {\n          response: {\n            headers\n          }\n        } = context;\n        const redirectUrl = headers.get('redirectslug');\n        const errors = response?.errors;\n\n        if (errors &amp;&amp; redirectUrl) {\n          ctx?.res?.writeHead(301, {\n            Location: redirectUrl\n          }).end(); // return empty object to avoid graphql error\n\n          return {};\n        }\n      }\n\n      return response;\n    });\n  });\n  const customHeadersLink = new _apollo_client__WEBPACK_IMPORTED_MODULE_2__.ApolloLink((operation, forward) =&gt; {\n    const customHeaders = {}; // Pass client headers when doing ssr\n\n    if (true) {\n      const userAgent = headers?.['user-agent'];\n      const xClientIp = headers?.['x-forwarded-for'] || ctx?.req?.socket.remoteAddress;\n      userAgent &amp;&amp; (customHeaders['user-agent'] = userAgent);\n      xClientIp &amp;&amp; (customHeaders['x-client-ip'] = xClientIp);\n    }\n\n    operation.setContext(({\n      headers: operationHeaders = {}\n    }) =&gt; ({\n      headers: _objectSpread(_objectSpread({}, customHeaders), operationHeaders)\n    }));\n    return forward(operation);\n  });\n  const httpUploadLink = (0,apollo_upload_client__WEBPACK_IMPORTED_MODULE_1__.createUploadLink)({\n    uri: constants_api__WEBPACK_IMPORTED_MODULE_4__.NEXT_PUBLIC_API_HOST\n  });\n  const link = (0,_apollo_client__WEBPACK_IMPORTED_MODULE_2__.from)([errorLink, customHeadersLink, authLink, httpUploadLink]);\n  return new _apollo_client__WEBPACK_IMPORTED_MODULE_2__.ApolloClient({\n    defaultOptions: {\n      watchQuery: {\n        fetchPolicy: 'cache-and-network',\n        nextFetchPolicy: 'cache-first'\n      }\n    },\n    cache: new _apollo_client__WEBPACK_IMPORTED_MODULE_2__.InMemoryCache({\n      typePolicies: {\n        Query: {\n          fields: {\n            capsules: {\n              keyArgs: ['order', ['id', 'type', 'landings', 'original_launch'], 'sort', ['acceding', 'descending'], 'offset', 'limit', 'find', ['id', 'landings', 'mission', 'original_launch', 'reuse_count', 'status', 'type']],\n              merge\n            },\n            ships: {\n              keyArgs: ['order', ['id', 'name', 'year_built', 'status', 'active', 'home_port', 'attempted_landings', 'successful_landings', 'weight_kg'], 'sort', ['acceding', 'descending'], 'offset', 'limit', 'find', ['abs', 'active', 'attempted_landings', 'class', 'course_deg', 'home_port', 'id', 'imo', 'latitude', 'longitude', 'mission', 'mmsi', 'model', 'name', 'role', 'speed_kn', 'status', 'successful_landings', 'type', 'weight_kg', 'weight_lbs', 'year_built']],\n              merge\n            }\n          }\n        }\n      }\n    }).restore(initialState || {}),\n    link\n  });\n}, {\n  render: function renderWithApollo({\n    Page,\n    props\n  }) {\n    return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)(_apollo_client__WEBPACK_IMPORTED_MODULE_2__.ApolloProvider, {\n      client: props.apollo,\n      children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)(Page, _objectSpread({}, props), void 0, false, {\n        fileName: _jsxFileName,\n        lineNumber: 209,\n        columnNumber: 11\n      }, this)\n    }, void 0, false, {\n      fileName: _jsxFileName,\n      lineNumber: 208,\n      columnNumber: 9\n    }, this);\n  }\n}));\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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QUFDLDBEQUFEO01BQWdCLE1BQU0sRUFBRUEsS0FBSyxDQUFDQyxNQUE5QjtNQUFBLHVCQUNFLDhEQUFDLElBQUQsb0JBQVVELEtBQVY7UUFBQTtRQUFBO1FBQUE7TUFBQTtJQURGO01BQUE7TUFBQTtNQUFBO0lBQUEsUUFERjtFQUtEO0FBUEgsQ0FwSnVCLENBQXpCLEUiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9uZXh0anNfcGxheWdyb3VuZC8uL2hvY3Mvd2l0aEFwb2xsby50c3g/ZjkxYyJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgd2l0aEFwb2xsbyBmcm9tICduZXh0LXdpdGgtYXBvbGxvJztcbmltcG9ydCB7IGNyZWF0ZVVwbG9hZExpbmsgfSBmcm9tICdhcG9sbG8tdXBsb2FkLWNsaWVudCc7XG5pbXBvcnQge1xuICBmcm9tLFxuICBBcG9sbG9Qcm92aWRlcixcbiAgQXBvbGxvTGluayxcbiAgQXBvbGxvQ2xpZW50LFxuICBJbk1lbW9yeUNhY2hlLFxuICBGaWVsZE1lcmdlRnVuY3Rpb24sXG4gIEZpZWxkRnVuY3Rpb25PcHRpb25zLFxufSBmcm9tICdAYXBvbGxvL2NsaWVudCc7XG5pbXBvcnQgeyBvbkVycm9yIH0gZnJvbSAnQGFwb2xsby9jbGllbnQvbGluay9lcnJvcic7XG4vLyBUeXBlc1xuaW1wb3J0IHsgQ2Fwc3VsZXMsIENhcHN1bGVzVmFyaWFibGVzIH0gZnJvbSAnYXBpL2NhcHN1bGVzL3R5cGVzL0NhcHN1bGVzJztcbi8vIENvbnN0YW50c1xuaW1wb3J0IHsgTkVYVF9QVUJMSUNfQVBJX0hPU1QgfSBmcm9tICdjb25zdGFudHMvYXBpJztcblxuLy8gdXNpbmcgXCJDYXBzdWxlc1wiICYgXCJDYXBzdWxlc1ZhcmlhYmxlc1wiIHR5cGVzIGFzIGFuIGV4YW1wbGUgb2YgYSByZWd1bGFyIHBhZ2luYXRlZCBxdWVyeVxuY29uc3QgbWVyZ2U6IEZpZWxkTWVyZ2VGdW5jdGlvbjxcbiAgQ2Fwc3VsZXMsXG4gIENhcHN1bGVzLFxuICBGaWVsZEZ1bmN0aW9uT3B0aW9uczxDYXBzdWxlc1ZhcmlhYmxlcz5cbj4gPSAoZXhpc3RpbmcsIGluY29taW5nLCB7IGFyZ3MgfSkgPT4ge1xuICBjb25zdCBleGlzdGluZ0VudGl0aWVzID0gZXhpc3Rpbmc/LmNhcHN1bGVzIHx8IFtdO1xuICBjb25zdCBpbmNvbWluZ0VudGl0aWVzID0gaW5jb21pbmc/LmNhcHN1bGVzIHx8IFtdO1xuICBjb25zdCByZXN1bHQgPSBbLi4uZXhpc3RpbmdFbnRpdGllcywgLi4uaW5jb21pbmdFbnRpdGllc107XG5cbiAgaWYgKGFyZ3MgJiYgIWFyZ3M/Lm9mZnNldCkge1xuICAgIC8vIEluaXRpYWwgZmV0Y2ggb3IgcmVmZXRjaFxuICAgIHJldHVybiBpbmNvbWluZztcbiAgfVxuXG4gIC8vIFBhZ2luYXRpb25cbiAgcmV0dXJuIHtcbiAgICAuLi5pbmNvbWluZyxcbiAgICBlbnRpdGllczogcmVzdWx0LFxuICB9O1xufTtcblxuZXhwb3J0IGNvbnN0IGVycm9yTGluayA9IG9uRXJyb3IoKHsgZ3JhcGhRTEVycm9ycywgbmV0d29ya0Vycm9yIH0pID0+IHtcbiAgaWYgKGdyYXBoUUxFcnJvcnMpIHtcbiAgICBncmFwaFFMRXJyb3JzLm1hcCgoeyBtZXNzYWdlIH0pID0+IHtcbiAgICAgIGNvbnNvbGUubG9nKGBbR3JhcGhRTCBlcnJvcl06ICR7bWVzc2FnZX1gKTtcbiAgICB9KTtcbiAgfVxuXG4gIGlmIChuZXR3b3JrRXJyb3IpIHtcbiAgICBjb25zdCBlcnJvck1lc3NhZ2UgPVxuICAgICAgdHlwZW9mIG5ldHdvcmtFcnJvciA9PT0gJ3N0cmluZydcbiAgICAgICAgPyBuZXR3b3JrRXJyb3JcbiAgICAgICAgOiBKU09OLnN0cmluZ2lmeShuZXR3b3JrRXJyb3IpO1xuXG4gICAgY29uc29sZS5sb2coYFtOZXR3b3JrIGVycm9yXTogJHtlcnJvck1lc3NhZ2V9YCk7XG4gIH1cbn0pO1xuXG5leHBvcnQgZGVmYXVsdCB3aXRoQXBvbGxvKFxuICAoeyBpbml0aWFsU3RhdGUsIGhlYWRlcnMsIGN0eCB9KSA9PiB7XG4gICAgLy8gZ3JhcGhxbCBjb25maWdcbiAgICBjb25zdCBhdXRoTGluayA9IG5ldyBBcG9sbG9MaW5rKChvcGVyYXRpb24sIGZvcndhcmQpID0+IHtcbiAgICAgIG9wZXJhdGlvbi5zZXRDb250ZXh0KCh7IGhlYWRlcnM6IG9wZXJhdGlvbkhlYWRlcnMgPSB7fSB9KSA9PiB7XG4gICAgICAgIHJldHVybiB7XG4gICAgICAgICAgaGVhZGVyczoge1xuICAgICAgICAgICAgLi4ub3BlcmF0aW9uSGVhZGVycyxcbiAgICAgICAgICB9LFxuICAgICAgICB9O1xuICAgICAgfSk7XG5cbiAgICAgIHJldHVybiBmb3J3YXJkKG9wZXJhdGlvbikubWFwKChyZXNwb25zZSkgPT4ge1xuICAgICAgICAvLyByZWRpcmVjdCB0byBvcmlnaW5hbCBzbHVnIGlmIGJhY2tlbmQgc2VuZCBhIHJlZGlyZWN0IHNsdWcgdmFsdWVcbiAgICAgICAgaWYgKCFwcm9jZXNzLmJyb3dzZXIpIHtcbiAgICAgICAgICBjb25zdCBjb250ZXh0ID0gb3BlcmF0aW9uLmdldENvbnRleHQoKTtcbiAgICAgICAgICBjb25zdCB7XG4gICAgICAgICAgICByZXNwb25zZTogeyBoZWFkZXJzIH0sXG4gICAgICAgICAgfSA9IGNvbnRleHQ7XG4gICAgICAgICAgY29uc3QgcmVkaXJlY3RVcmwgPSBoZWFkZXJzLmdldCgncmVkaXJlY3RzbHVnJyk7XG4gICAgICAgICAgY29uc3QgZXJyb3JzID0gcmVzcG9uc2U/LmVycm9ycztcblxuICAgICAgICAgIGlmIChlcnJvcnMgJiYgcmVkaXJlY3RVcmwpIHtcbiAgICAgICAgICAgIGN0eD8ucmVzPy53cml0ZUhlYWQoMzAxLCB7IExvY2F0aW9uOiByZWRpcmVjdFVybCB9KS5lbmQoKTtcblxuICAgICAgICAgICAgLy8gcmV0dXJuIGVtcHR5IG9iamVjdCB0byBhdm9pZCBncmFwaHFsIGVycm9yXG4gICAgICAgICAgICByZXR1cm4ge307XG4gICAgICAgICAgfVxuICAgICAgICB9XG5cbiAgICAgICAgcmV0dXJuIHJlc3BvbnNlO1xuICAgICAgfSk7XG4gICAgfSk7XG5cbiAgICBjb25zdCBjdXN0b21IZWFkZXJzTGluayA9IG5ldyBBcG9sbG9MaW5rKChvcGVyYXRpb24sIGZvcndhcmQpID0+IHtcbiAgICAgIGNvbnN0IGN1c3RvbUhlYWRlcnMgPSB7fTtcblxuICAgICAgLy8gUGFzcyBjbGllbnQgaGVhZGVycyB3aGVuIGRvaW5nIHNzclxuICAgICAgaWYgKCFwcm9jZXNzLmJyb3dzZXIpIHtcbiAgICAgICAgY29uc3QgdXNlckFnZW50ID0gaGVhZGVycz8uWyd1c2VyLWFnZW50J107XG4gICAgICAgIGNvbnN0IHhDbGllbnRJcCA9XG4gICAgICAgICAgaGVhZGVycz8uWyd4LWZvcndhcmRlZC1mb3InXSB8fCBjdHg/LnJlcT8uc29ja2V0LnJlbW90ZUFkZHJlc3M7XG5cbiAgICAgICAgdXNlckFnZW50ICYmIChjdXN0b21IZWFkZXJzWyd1c2VyLWFnZW50J10gPSB1c2VyQWdlbnQpO1xuICAgICAgICB4Q2xpZW50SXAgJiYgKGN1c3RvbUhlYWRlcnNbJ3gtY2xpZW50LWlwJ10gPSB4Q2xpZW50SXApO1xuICAgICAgfVxuXG4gICAgICBvcGVyYXRpb24uc2V0Q29udGV4dCgoeyBoZWFkZXJzOiBvcGVyYXRpb25IZWFkZXJzID0ge30gfSkgPT4gKHtcbiAgICAgICAgaGVhZGVyczoge1xuICAgICAgICAgIC4uLmN1c3RvbUhlYWRlcnMsXG4gICAgICAgICAgLi4ub3BlcmF0aW9uSGVhZGVycyxcbiAgICAgICAgfSxcbiAgICAgIH0pKTtcblxuICAgICAgcmV0dXJuIGZvcndhcmQob3BlcmF0aW9uKTtcbiAgICB9KTtcblxuICAgIGNvbnN0IGh0dHBVcGxvYWRMaW5rID0gY3JlYXRlVXBsb2FkTGluayh7XG4gICAgICB1cmk6IE5FWFRfUFVCTElDX0FQSV9IT1NULFxuICAgIH0pO1xuXG4gICAgY29uc3QgbGluayA9IGZyb20oW2Vycm9yTGluaywgY3VzdG9tSGVhZGVyc0xpbmssIGF1dGhMaW5rLCBodHRwVXBsb2FkTGlua10pO1xuXG4gICAgcmV0dXJuIG5ldyBBcG9sbG9DbGllbnQoe1xuICAgICAgZGVmYXVsdE9wdGlvbnM6IHtcbiAgICAgICAgd2F0Y2hRdWVyeToge1xuICAgICAgICAgIGZldGNoUG9saWN5OiAnY2FjaGUtYW5kLW5ldHdvcmsnLFxuICAgICAgICAgIG5leHRGZXRjaFBvbGljeTogJ2NhY2hlLWZpcnN0JyxcbiAgICAgICAgfSxcbiAgICAgIH0sXG4gICAgICBjYWNoZTogbmV3IEluTWVtb3J5Q2FjaGUoe1xuICAgICAgICB0eXBlUG9saWNpZXM6IHtcbiAgICAgICAgICBRdWVyeToge1xuICAgICAgICAgICAgZmllbGRzOiB7XG4gICAgICAgICAgICAgIGNhcHN1bGVzOiB7XG4gICAgICAgICAgICAgICAga2V5QXJnczogW1xuICAgICAgICAgICAgICAgICAgJ29yZGVyJyxcbiAgICAgICAgICAgICAgICAgIFsnaWQnLCAndHlwZScsICdsYW5kaW5ncycsICdvcmlnaW5hbF9sYXVuY2gnXSxcbiAgICAgICAgICAgICAgICAgICdzb3J0JyxcbiAgICAgICAgICAgICAgICAgIFsnYWNjZWRpbmcnLCAnZGVzY2VuZGluZyddLFxuICAgICAgICAgICAgICAgICAgJ29mZnNldCcsXG4gICAgICAgICAgICAgICAgICAnbGltaXQnLFxuICAgICAgICAgICAgICAgICAgJ2ZpbmQnLFxuICAgICAgICAgICAgICAgICAgW1xuICAgICAgICAgICAgICAgICAgICAnaWQnLFxuICAgICAgICAgICAgICAgICAgICAnbGFuZGluZ3MnLFxuICAgICAgICAgICAgICAgICAgICAnbWlzc2lvbicsXG4gICAgICAgICAgICAgICAgICAgICdvcmlnaW5hbF9sYXVuY2gnLFxuICAgICAgICAgICAgICAgICAgICAncmV1c2VfY291bnQnLFxuICAgICAgICAgICAgICAgICAgICAnc3RhdHVzJyxcbiAgICAgICAgICAgICAgICAgICAgJ3R5cGUnLFxuICAgICAgICAgICAgICAgICAgXSxcbiAgICAgICAgICAgICAgICBdLFxuICAgICAgICAgICAgICAgIG1lcmdlLFxuICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICBzaGlwczoge1xuICAgICAgICAgICAgICAgIGtleUFyZ3M6IFtcbiAgICAgICAgICAgICAgICAgICdvcmRlcicsXG4gICAgICAgICAgICAgICAgICBbXG4gICAgICAgICAgICAgICAgICAgICdpZCcsXG4gICAgICAgICAgICAgICAgICAgICduYW1lJyxcbiAgICAgICAgICAgICAgICAgICAgJ3llYXJfYnVpbHQnLFxuICAgICAgICAgICAgICAgICAgICAnc3RhdHVzJyxcbiAgICAgICAgICAgICAgICAgICAgJ2FjdGl2ZScsXG4gICAgICAgICAgICAgICAgICAgICdob21lX3BvcnQnLFxuICAgICAgICAgICAgICAgICAgICAnYXR0ZW1wdGVkX2xhbmRpbmdzJyxcbiAgICAgICAgICAgICAgICAgICAgJ3N1Y2Nlc3NmdWxfbGFuZGluZ3MnLFxuICAgICAgICAgICAgICAgICAgICAnd2VpZ2h0X2tnJyxcbiAgICAgICAgICAgICAgICAgIF0sXG4gICAgICAgICAgICAgICAgICAnc29ydCcsXG4gICAgICAgICAgICAgICAgICBbJ2FjY2VkaW5nJywgJ2Rlc2NlbmRpbmcnXSxcbiAgICAgICAgICAgICAgICAgICdvZmZzZXQnLFxuICAgICAgICAgICAgICAgICAgJ2xpbWl0JyxcbiAgICAgICAgICAgICAgICAgICdmaW5kJyxcbiAgICAgICAgICAgICAgICAgIFtcbiAgICAgICAgICAgICAgICAgICAgJ2FicycsXG4gICAgICAgICAgICAgICAgICAgICdhY3RpdmUnLFxuICAgICAgICAgICAgICAgICAgICAnYXR0ZW1wdGVkX2xhbmRpbmdzJyxcbiAgICAgICAgICAgICAgICAgICAgJ2NsYXNzJyxcbiAgICAgICAgICAgICAgICAgICAgJ2NvdXJzZV9kZWcnLFxuICAgICAgICAgICAgICAgICAgICAnaG9tZV9wb3J0JyxcbiAgICAgICAgICAgICAgICAgICAgJ2lkJyxcbiAgICAgICAgICAgICAgICAgICAgJ2ltbycsXG4gICAgICAgICAgICAgICAgICAgICdsYXRpdHVkZScsXG4gICAgICAgICAgICAgICAgICAgICdsb25naXR1ZGUnLFxuICAgICAgICAgICAgICAgICAgICAnbWlzc2lvbicsXG4gICAgICAgICAgICAgICAgICAgICdtbXNpJyxcbiAgICAgICAgICAgICAgICAgICAgJ21vZGVsJyxcbiAgICAgICAgICAgICAgICAgICAgJ25hbWUnLFxuICAgICAgICAgICAgICAgICAgICAncm9sZScsXG4gICAgICAgICAgICAgICAgICAgICdzcGVlZF9rbicsXG4gICAgICAgICAgICAgICAgICAgICdzdGF0dXMnLFxuICAgICAgICAgICAgICAgICAgICAnc3VjY2Vzc2Z1bF9sYW5kaW5ncycsXG4gICAgICAgICAgICAgICAgICAgICd0eXBlJyxcbiAgICAgICAgICAgICAgICAgICAgJ3dlaWdodF9rZycsXG4gICAgICAgICAgICAgICAgICAgICd3ZWlnaHRfbGJzJyxcbiAgICAgICAgICAgICAgICAgICAgJ3llYXJfYnVpbHQnLFxuICAgICAgICAgICAgICAgICAgXSxcbiAgICAgICAgICAgICAgICBdLFxuICAgICAgICAgICAgICAgIG1lcmdlLFxuICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgfSxcbiAgICAgICAgICB9LFxuICAgICAgICB9LFxuICAgICAgfSkucmVzdG9yZShpbml0aWFsU3RhdGUgfHwge30pLFxuICAgICAgbGluayxcbiAgICB9KTtcbiAgfSxcbiAge1xuICAgIHJlbmRlcjogZnVuY3Rpb24gcmVuZGVyV2l0aEFwb2xsbyh7IFBhZ2UsIHByb3BzIH0pIHtcbiAgICAgIHJldHVybiAoXG4gICAgICAgIDxBcG9sbG9Qcm92aWRlciBjbGllbnQ9e3Byb3BzLmFwb2xsb30+XG4gICAgICAgICAgPFBhZ2Ugey4uLnByb3BzfSAvPlxuICAgICAgICA8L0Fwb2xsb1Byb3ZpZGVyPlxuICAgICAgKTtcbiAgICB9LFxuICB9XG4pO1xuIl0sIm5hbWVzIjpbIndpdGhBcG9sbG8iLCJjcmVhdGVVcGxvYWRMaW5rIiwiZnJvbSIsIkFwb2xsb1Byb3ZpZGVyIiwiQXBvbGxvTGluayIsIkFwb2xsb0NsaWVudCIsIkluTWVtb3J5Q2FjaGUiLCJvbkVycm9yIiwiTkVYVF9QVUJMSUNfQVBJX0hPU1QiLCJtZXJnZSIsImV4aXN0aW5nIiwiaW5jb21pbmciLCJhcmdzIiwiZXhpc3RpbmdFbnRpdGllcyIsImNhcHN1bGVzIiwiaW5jb21pbmdFbnRpdGllcyIsInJlc3VsdCIsIm9mZnNldCIsImVudGl0aWVzIiwiZXJyb3JMaW5rIiwiZ3JhcGhRTEVycm9ycyIsIm5ldHdvcmtFcnJvciIsIm1hcCIsIm1lc3NhZ2UiLCJjb25zb2xlIiwibG9nIiwiZXJyb3JNZXNzYWdlIiwiSlNPTiIsInN0cmluZ2lmeSIsImluaXRpYWxTdGF0ZSIsImhlYWRlcnMiLCJjdHgiLCJhdXRoTGluayIsIm9wZXJhdGlvbiIsImZvcndhcmQiLCJzZXRDb250ZXh0Iiwib3BlcmF0aW9uSGVhZGVycyIsInJlc3BvbnNlIiwiY29udGV4dCIsImdldENvbnRleHQiLCJyZWRpcmVjdFVybCIsImdldCIsImVycm9ycyIsInJlcyIsIndyaXRlSGVhZCIsIkxvY2F0aW9uIiwiZW5kIiwiY3VzdG9tSGVhZGVyc0xpbmsiLCJjdXN0b21IZWFkZXJzIiwidXNlckFnZW50IiwieENsaWVudElwIiwicmVxIiwic29ja2V0IiwicmVtb3RlQWRkcmVzcyIsImh0dHBVcGxvYWRMaW5rIiwidXJpIiwibGluayIsImRlZmF1bHRPcHRpb25zIiwid2F0Y2hRdWVyeSIsImZldGNoUG9saWN5IiwibmV4dEZldGNoUG9saWN5IiwiY2FjaGUiLCJ0eXBlUG9saWNpZXMiLCJRdWVyeSIsImZpZWxkcyIsImtleUFyZ3MiLCJzaGlwcyIsInJlc3RvcmUiLCJyZW5kZXIiLCJyZW5kZXJXaXRoQXBvbGxvIiwiUGFnZSIsInByb3BzIiwiYXBvbGxvIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./hocs/withApollo.tsx\n");</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ }),</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ "./pages/index.tsx":</span>
+<span class="cstat-no" title="statement not covered" >/*!*************************!*\</span>
+<span class="cstat-no" title="statement not covered" >  !*** ./pages/index.tsx ***!</span>
+<span class="cstat-no" title="statement not covered" >  \*************************/</span>
+<span class="cstat-no" title="statement not covered" >/***/ ((module, __webpack_exports__, __webpack_require__) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >"use strict";</span>
+<span class="cstat-no" title="statement not covered" >eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) =&gt; { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () =&gt; (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var hocs_withApollo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! hocs/withApollo */ \"./hocs/withApollo.tsx\");\n/* harmony import */ var components_HomePage_HomePage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! components/HomePage/HomePage */ \"./components/HomePage/HomePage.tsx\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__);\nvar __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([hocs_withApollo__WEBPACK_IMPORTED_MODULE_0__]);\nhocs_withApollo__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];\nvar _jsxFileName = \"/Users/odarka/Sites/Litslink_Prpjects/Kofaka/nextjs_playground_gitlab/pages/index.tsx\";\n// Hocks\n // Components\n\n\n\n\nconst Home = () =&gt; {\n  return /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxDEV)(components_HomePage_HomePage__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {}, void 0, false, {\n    fileName: _jsxFileName,\n    lineNumber: 8,\n    columnNumber: 10\n  }, undefined);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,hocs_withApollo__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(Home));\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } });//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9pbmRleC50c3guanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7O0FBQ0E7Q0FFQTs7QUFDQTs7O0FBRUEsTUFBTUUsSUFBYyxHQUFHLE1BQU07RUFDM0Isb0JBQU8sOERBQUMsb0VBQUQ7SUFBQTtJQUFBO0lBQUE7RUFBQSxhQUFQO0FBQ0QsQ0FGRDs7QUFJQSxpRUFBZUYsMkRBQVUsQ0FBQ0UsSUFBRCxDQUF6QixFIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbmV4dGpzX3BsYXlncm91bmQvLi9wYWdlcy9pbmRleC50c3g/MDdmZiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBOZXh0UGFnZSB9IGZyb20gJ25leHQnO1xuLy8gSG9ja3NcbmltcG9ydCB3aXRoQXBvbGxvIGZyb20gJ2hvY3Mvd2l0aEFwb2xsbyc7XG4vLyBDb21wb25lbnRzXG5pbXBvcnQgSG9tZVBhZ2UgZnJvbSAnY29tcG9uZW50cy9Ib21lUGFnZS9Ib21lUGFnZSc7XG5cbmNvbnN0IEhvbWU6IE5leHRQYWdlID0gKCkgPT4ge1xuICByZXR1cm4gPEhvbWVQYWdlIC8+O1xufTtcblxuZXhwb3J0IGRlZmF1bHQgd2l0aEFwb2xsbyhIb21lKTtcbiJdLCJuYW1lcyI6WyJ3aXRoQXBvbGxvIiwiSG9tZVBhZ2UiLCJIb21lIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./pages/index.tsx\n");</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ }),</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ "./components/HomePage/HomePage.module.scss":</span>
+<span class="cstat-no" title="statement not covered" >/*!**************************************************!*\</span>
+<span class="cstat-no" title="statement not covered" >  !*** ./components/HomePage/HomePage.module.scss ***!</span>
+<span class="cstat-no" title="statement not covered" >  \**************************************************/</span>
+<span class="cstat-no" title="statement not covered" >/***/ ((module) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >eval("// Exports\nmodule.exports = {\n\t\"root\": \"HomePage_root__sRUUj\",\n\t\"content\": \"HomePage_content__Y5ZvE\",\n\t\"emptyWrapper\": \"HomePage_emptyWrapper__hGl46\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0hvbWVQYWdlL0hvbWVQYWdlLm1vZHVsZS5zY3NzLmpzIiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL25leHRqc19wbGF5Z3JvdW5kLy4vY29tcG9uZW50cy9Ib21lUGFnZS9Ib21lUGFnZS5tb2R1bGUuc2Nzcz9mZTg2Il0sInNvdXJjZXNDb250ZW50IjpbIi8vIEV4cG9ydHNcbm1vZHVsZS5leHBvcnRzID0ge1xuXHRcInJvb3RcIjogXCJIb21lUGFnZV9yb290X19zUlVValwiLFxuXHRcImNvbnRlbnRcIjogXCJIb21lUGFnZV9jb250ZW50X19ZNVp2RVwiLFxuXHRcImVtcHR5V3JhcHBlclwiOiBcIkhvbWVQYWdlX2VtcHR5V3JhcHBlcl9faEdsNDZcIlxufTtcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./components/HomePage/HomePage.module.scss\n");</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ }),</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ "./components/HomePage/components/ShipsList/ShipsList.module.scss":</span>
+<span class="cstat-no" title="statement not covered" >/*!************************************************************************!*\</span>
+<span class="cstat-no" title="statement not covered" >  !*** ./components/HomePage/components/ShipsList/ShipsList.module.scss ***!</span>
+<span class="cstat-no" title="statement not covered" >  \************************************************************************/</span>
+<span class="cstat-no" title="statement not covered" >/***/ ((module) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >eval("// Exports\nmodule.exports = {\n\t\"root\": \"ShipsList_root__opOlH\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb21wb25lbnRzL0hvbWVQYWdlL2NvbXBvbmVudHMvU2hpcHNMaXN0L1NoaXBzTGlzdC5tb2R1bGUuc2Nzcy5qcyIsIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL25leHRqc19wbGF5Z3JvdW5kLy4vY29tcG9uZW50cy9Ib21lUGFnZS9jb21wb25lbnRzL1NoaXBzTGlzdC9TaGlwc0xpc3QubW9kdWxlLnNjc3M/NjEzNSJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBFeHBvcnRzXG5tb2R1bGUuZXhwb3J0cyA9IHtcblx0XCJyb290XCI6IFwiU2hpcHNMaXN0X3Jvb3RfX29wT2xIXCJcbn07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./components/HomePage/components/ShipsList/ShipsList.module.scss\n");</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ }),</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ "@apollo/client":</span>
+<span class="cstat-no" title="statement not covered" >/*!*********************************!*\</span>
+<span class="cstat-no" title="statement not covered" >  !*** external "@apollo/client" ***!</span>
+<span class="cstat-no" title="statement not covered" >  \*********************************/</span>
+<span class="cstat-no" title="statement not covered" >/***/ ((module) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >"use strict";</span>
+<span class="cstat-no" title="statement not covered" >module.exports = require("@apollo/client");</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ }),</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ "@apollo/client/link/error":</span>
+<span class="cstat-no" title="statement not covered" >/*!********************************************!*\</span>
+<span class="cstat-no" title="statement not covered" >  !*** external "@apollo/client/link/error" ***!</span>
+<span class="cstat-no" title="statement not covered" >  \********************************************/</span>
+<span class="cstat-no" title="statement not covered" >/***/ ((module) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >"use strict";</span>
+<span class="cstat-no" title="statement not covered" >module.exports = require("@apollo/client/link/error");</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ }),</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ "antd":</span>
+<span class="cstat-no" title="statement not covered" >/*!***********************!*\</span>
+<span class="cstat-no" title="statement not covered" >  !*** external "antd" ***!</span>
+<span class="cstat-no" title="statement not covered" >  \***********************/</span>
+<span class="cstat-no" title="statement not covered" >/***/ ((module) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >"use strict";</span>
+<span class="cstat-no" title="statement not covered" >module.exports = require("antd");</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ }),</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ "dayjs":</span>
+<span class="cstat-no" title="statement not covered" >/*!************************!*\</span>
+<span class="cstat-no" title="statement not covered" >  !*** external "dayjs" ***!</span>
+<span class="cstat-no" title="statement not covered" >  \************************/</span>
+<span class="cstat-no" title="statement not covered" >/***/ ((module) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >"use strict";</span>
+<span class="cstat-no" title="statement not covered" >module.exports = require("dayjs");</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ }),</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ "dayjs/plugin/localizedFormat":</span>
+<span class="cstat-no" title="statement not covered" >/*!***********************************************!*\</span>
+<span class="cstat-no" title="statement not covered" >  !*** external "dayjs/plugin/localizedFormat" ***!</span>
+<span class="cstat-no" title="statement not covered" >  \***********************************************/</span>
+<span class="cstat-no" title="statement not covered" >/***/ ((module) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >"use strict";</span>
+<span class="cstat-no" title="statement not covered" >module.exports = require("dayjs/plugin/localizedFormat");</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ }),</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ "next-with-apollo":</span>
+<span class="cstat-no" title="statement not covered" >/*!***********************************!*\</span>
+<span class="cstat-no" title="statement not covered" >  !*** external "next-with-apollo" ***!</span>
+<span class="cstat-no" title="statement not covered" >  \***********************************/</span>
+<span class="cstat-no" title="statement not covered" >/***/ ((module) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >"use strict";</span>
+<span class="cstat-no" title="statement not covered" >module.exports = require("next-with-apollo");</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ }),</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ "react":</span>
+<span class="cstat-no" title="statement not covered" >/*!************************!*\</span>
+<span class="cstat-no" title="statement not covered" >  !*** external "react" ***!</span>
+<span class="cstat-no" title="statement not covered" >  \************************/</span>
+<span class="cstat-no" title="statement not covered" >/***/ ((module) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >"use strict";</span>
+<span class="cstat-no" title="statement not covered" >module.exports = require("react");</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ }),</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ "react/jsx-dev-runtime":</span>
+<span class="cstat-no" title="statement not covered" >/*!****************************************!*\</span>
+<span class="cstat-no" title="statement not covered" >  !*** external "react/jsx-dev-runtime" ***!</span>
+<span class="cstat-no" title="statement not covered" >  \****************************************/</span>
+<span class="cstat-no" title="statement not covered" >/***/ ((module) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >"use strict";</span>
+<span class="cstat-no" title="statement not covered" >module.exports = require("react/jsx-dev-runtime");</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ }),</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ "apollo-upload-client":</span>
+<span class="cstat-no" title="statement not covered" >/*!***************************************!*\</span>
+<span class="cstat-no" title="statement not covered" >  !*** external "apollo-upload-client" ***!</span>
+<span class="cstat-no" title="statement not covered" >  \***************************************/</span>
+<span class="cstat-no" title="statement not covered" >/***/ ((module) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >"use strict";</span>
+<span class="cstat-no" title="statement not covered" >module.exports = import("apollo-upload-client");;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/***/ })</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >};</span>
+<span class="cstat-no" title="statement not covered" >;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >// load runtime</span>
+<span class="cstat-no" title="statement not covered" >var __webpack_require__ = require("../webpack-runtime.js");</span>
+<span class="cstat-no" title="statement not covered" >__webpack_require__.C(exports);</span>
+<span class="cstat-no" title="statement not covered" >var __webpack_exec__ = (moduleId) =&gt; (__webpack_require__(__webpack_require__.s = moduleId))</span>
+<span class="cstat-no" title="statement not covered" >var __webpack_exports__ = (__webpack_exec__("./pages/index.tsx"));</span>
+<span class="cstat-no" title="statement not covered" >module.exports = __webpack_exports__;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >})();</span></pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2023-01-20T14:35:14.524Z
+            </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    
