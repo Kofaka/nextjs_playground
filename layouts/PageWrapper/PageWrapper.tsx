@@ -12,23 +12,23 @@ import { HOME } from 'constants/routes';
 import Head from 'layouts/Head/Head';
 import SideBarMenu from 'layouts/SideBarMenu/SideBarMenu';
 // Styles
-import styles from './LayoutWrapper.module.scss';
+import styles from './PageWrapper.module.scss';
 
 const { Header, Content, Footer } = Layout;
 
-type LayoutWrapperProps = {
+type PageWrapperProps = {
   title: string;
   description: string;
   withSidebar?: boolean;
   children: ReactNode;
 };
 
-const LayoutWrapper = ({
+const PageWrapper = ({
   title,
   description,
   withSidebar = true,
   children,
-}: LayoutWrapperProps) => {
+}: PageWrapperProps) => {
   const hasMounted = useHasMounted();
 
   return (
@@ -91,4 +91,4 @@ const LayoutWrapper = ({
   );
 };
 
-export default LayoutWrapper;
+export default PageWrapper;
