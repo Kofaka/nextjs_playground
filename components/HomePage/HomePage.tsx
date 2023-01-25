@@ -49,9 +49,10 @@ const HomePage = (): JSX.Element => {
   });
 
   const onPaginationChange: PaginationProps['onChange'] = (page, size) => {
-    if (currentPage !== page) {
+    if (page > 0 && currentPage !== page) {
       setCurrentPage(page);
     }
+
     if (pageSize !== size) {
       setPageSize(size);
     }
