@@ -5,7 +5,7 @@ import { HOME, NEW_PAGE, NOT_FOUND } from 'constants/routes';
 // Styles
 import 'styles/globals.scss';
 // Layouts
-import LayoutWrapper from 'layouts/LayoutWrapper/LayoutWrapper';
+import PageWrapper from 'layouts/PageWrapper/PageWrapper';
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   const { pathname } = useRouter();
@@ -26,13 +26,13 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   };
 
   return (
-    <LayoutWrapper
+    <PageWrapper
       title={routesData[pathname].title}
       description={routesData[pathname].description}
       withSidebar={pathname !== NOT_FOUND}
     >
       <Component {...pageProps} />
-    </LayoutWrapper>
+    </PageWrapper>
   );
 };
 

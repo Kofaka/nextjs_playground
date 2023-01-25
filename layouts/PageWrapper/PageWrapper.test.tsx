@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 // Constants
 import { HOME } from 'constants/routes';
 // Components
-import LayoutWrapper from './LayoutWrapper';
+import PageWrapper from './PageWrapper';
 
 const mockHeadComponent = jest.fn();
 // eslint-disable-next-line react/display-name
@@ -12,16 +12,16 @@ jest.mock('layouts/Head/Head', () => (props: any): JSX.Element => {
   return <title>Some title</title>;
 });
 
-describe('layouts/LayoutWrapper/LayoutWrapper', () => {
+describe('layouts/PageWrapper/PageWrapper', () => {
   it('should render basic components', async () => {
     const title = 'Some random title';
     const description = 'Some random description';
     const childrenContent = 'Some dummy children';
 
     render(
-      <LayoutWrapper title={title} description={description}>
+      <PageWrapper title={title} description={description}>
         <p>{childrenContent}</p>
-      </LayoutWrapper>
+      </PageWrapper>
     );
     await wait();
 
