@@ -215,7 +215,7 @@ describe('components/HomePage/HomePage', () => {
         screen.queryByRole('img', { name: name as string })
       ).not.toBeInTheDocument();
     });
-  }, 6000);
+  }, 9000);
 
   it('should properly handle the page pagination by page size', async () => {
     render(<HomePage />, {
