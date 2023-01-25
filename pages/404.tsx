@@ -1,27 +1,11 @@
-import { Result, Button } from 'antd';
-import { useRouter } from 'next/router';
-// Constants
-import { HOME } from 'constants/routes';
+import { NextPage } from 'next';
+// Hocks
+import withApollo from 'hocs/withApollo';
+// Components
+import NotFoundPage from 'components/NotFoundPage/NotFoundPage';
 
-const NotFoundPage = () => {
-  const router = useRouter();
-
-  const handleGoHome = () => {
-    router.push(HOME).then();
-  };
-
-  return (
-    <Result
-      status="404"
-      title="404"
-      subTitle="Sorry, the page you visited does not exist."
-      extra={
-        <Button type="primary" onClick={handleGoHome}>
-          Back Home
-        </Button>
-      }
-    />
-  );
+const _404: NextPage = () => {
+  return <NotFoundPage />;
 };
 
-export default NotFoundPage;
+export default withApollo(_404);
