@@ -3,7 +3,7 @@ import { Result, Button } from 'antd';
 // Constants
 import { HOME } from 'constants/routes';
 
-const NotFoundPage = () => {
+const NotFound = () => {
   const router = useRouter();
 
   const handleGoHome = () => {
@@ -24,4 +24,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage;
+export default NotFound;

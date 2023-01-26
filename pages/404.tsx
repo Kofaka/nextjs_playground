@@ -2,10 +2,10 @@ import { NextPage } from 'next';
 // Hocks
 import withApollo from 'hocs/withApollo';
 // Components
-import NotFoundPage from 'components/NotFoundPage/NotFoundPage';
+import NotFound from 'components/NotFound/NotFound';
 
-const _404: NextPage = () => {
-  return <NotFoundPage />;
+const _404Page: NextPage = () => {
+  return <NotFound />;
 };
 
-export default withApollo(_404);
+export default withApollo(_404Page);
