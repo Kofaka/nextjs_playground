@@ -1,13 +1,14 @@
 import { ReactNode } from 'react';
-import dayjs from 'dayjs';
-import cn from 'classnames';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 import NextImage from 'next/image';
+import Link from 'next/link';
+import cn from 'classnames';
+import dayjs from 'dayjs';
 import { ConfigProvider, Layout, Space, Spin, theme } from 'antd';
 // Hooks
 import { useHasMounted } from 'hooks';
 // Constants
-import { HOME } from 'constants/routes';
+import { HOME, NOT_FOUND } from 'constants/routes';
 // Layouts
 import Head from 'layouts/Head/Head';
 import SideBarMenu from 'layouts/SideBarMenu/SideBarMenu';
@@ -17,23 +18,30 @@ import styles from './PageWrapper.module.scss';
 const { Header, Content, Footer } = Layout;
 
 type PageWrapperProps = {
-  title: string;
-  description: string;
-  withSidebar?: boolean;
   children: ReactNode;
 };
 
-const PageWrapper = ({
-  title,
-  description,
-  withSidebar = true,
-  children,
-}: PageWrapperProps) => {
+const PageWrapper = ({ children }: PageWrapperProps) => {
+  const { pathname } = useRouter();
   const hasMounted = useHasMounted();
+
+  const routesData: Record<string, { title: string; description: string }> = {
+    [HOME]: {
+      title: 'The list of SpaseX ships',
+      description: 'The example of page with paginated list',
+    },
+    [NOT_FOUND]: {
+      title: 'Page not found',
+      description: 'Page not found',
+    },
+  };
 
   return (
     <>
-      <Head title={title} description={description} />
+      <Head
+        title={routesData[pathname].title}
+        description={routesData[pathname].description}
+      />
 
       <ConfigProvider
         theme={{
@@ -65,7 +73,7 @@ const PageWrapper = ({
           </Header>
 
           <Layout>
-            {withSidebar && <SideBarMenu />}
+            {pathname !== NOT_FOUND && <SideBarMenu />}
 
             <Layout>
               <Content
