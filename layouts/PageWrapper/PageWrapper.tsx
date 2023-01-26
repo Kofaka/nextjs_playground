@@ -8,7 +8,7 @@ import { ConfigProvider, Layout, Space, Spin, theme } from 'antd';
 // Hooks
 import { useHasMounted } from 'hooks';
 // Constants
-import { HOME, NOT_FOUND } from 'constants/routes';
+import { HOME, USERS, NOT_FOUND } from 'constants/routes';
 // Layouts
 import Head from 'layouts/Head/Head';
 import SideBarMenu from 'layouts/SideBarMenu/SideBarMenu';
@@ -29,6 +29,10 @@ const PageWrapper = ({ children }: PageWrapperProps) => {
     [HOME]: {
       title: 'The list of SpaseX ships',
       description: 'The example of page with paginated list',
+    },
+    [USERS]: {
+      title: 'Manage Users',
+      description: 'The example of page with table and CRUD',
     },
     [NOT_FOUND]: {
       title: 'Page not found',

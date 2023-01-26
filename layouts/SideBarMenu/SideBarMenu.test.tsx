@@ -1,7 +1,6 @@
 import { wait, render, screen, userEvent } from 'test-utils';
 // Constants
-// TODO: uncomment this when some new page will be in the menu
-// import { HOME } from 'constants/routes';
+import { HOME, USERS } from 'constants/routes';
 // Components
 import SideBarMenu from './SideBarMenu';
 
@@ -43,27 +42,26 @@ describe('layouts/SideBarMenu/SideBarMenu', () => {
     expect(screen.getByRole('complementary')).toHaveClass(expandedClassName);
   });
 
-  // TODO: uncomment this when some new page will be in the menu
-  // it('should properly handle the click on menu item', async () => {
-  //   const pushMock = jest.fn().mockImplementation(() => Promise.resolve());
-  //
-  //   render(<SideBarMenu />, {
-  //     wrapperProps: {
-  //       router: {
-  //         pathname: HOME,
-  //         push: pushMock,
-  //       },
-  //     },
-  //   });
-  //   await wait();
-  //
-  //   await userEvent.click(
-  //     screen.getByRole('menuitem', {
-  //       name: /heat-map New Page Example/i,
-  //     })
-  //   );
-  //
-  //   expect(pushMock).toBeCalledTimes(1);
-  //   expect(pushMock).toBeCalledWith(NEW_PAGE);
-  // });
+  it('should properly handle the click on menu item', async () => {
+    const pushMock = jest.fn().mockImplementation(() => Promise.resolve());
+
+    render(<SideBarMenu />, {
+      wrapperProps: {
+        router: {
+          pathname: HOME,
+          push: pushMock,
+        },
+      },
+    });
+    await wait();
+
+    await userEvent.click(
+      screen.getByRole('menuitem', {
+        name: /user CRUD Example/i,
+      })
+    );
+
+    expect(pushMock).toBeCalledTimes(1);
+    expect(pushMock).toBeCalledWith(USERS);
+  });
 });
