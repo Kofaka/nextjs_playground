@@ -5,11 +5,10 @@ import { SelectInfo } from 'rc-menu/lib/interface';
 import {
   FallOutlined,
   UngroupOutlined,
-  HeatMapOutlined,
   AppstoreOutlined,
 } from '@ant-design/icons';
 // Constants
-import { HOME, NEW_PAGE } from 'constants/routes';
+import { HOME } from 'constants/routes';
 
 const { Sider } = Layout;
 
@@ -44,7 +43,6 @@ const SideBarMenu = (): JSX.Element => {
 
   const items: MenuItem[] = [
     getMenuItem('Pagination Example', HOME, <AppstoreOutlined />),
-    getMenuItem('New Page Example', NEW_PAGE, <HeatMapOutlined />),
     getMenuItem('Select Random Page', null, <FallOutlined />, [
       getMenuItem('Option 1', '/expanded-one', <UngroupOutlined />),
     ]),
