@@ -13,7 +13,7 @@
     "ts-check": "tsc --noEmit",
     "prepare": "husky install",
     "prepush": "eslint --ext=ts,tsx . --max-warnings=0 && yarn ts-check && yarn test",
-    "download-schema": "apollo client:download-schema --endpoint=https://api.spacex.land/graphql/ schema.json",
+    "download-schema": "apollo client:download-schema --endpoint=https://spacex-production.up.railway.app/ schema.json",
     "update-types": "apollo codegen:generate --localSchemaFile=schema.json --target=typescript --includes='api/**/*.ts' --excludes='api/chat/**/*.ts' --tagName=gql --addTypename --globalTypesFile=api/graphql-global-types.ts types",
     "update-apollo-types": "yarn download-schema && yarn update-types"
   },
