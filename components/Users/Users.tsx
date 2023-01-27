@@ -10,11 +10,11 @@ import {
   Users as UsersType,
 } from 'api/users/types/Users';
 // Helpers
-import { generateMockEntities } from 'helpers/misc';
+import { generateFakeEntities } from 'helpers/misc';
 // Ui
 import Table from 'ui/Table/Table';
 
-const mockedUsers: Users_users[] = generateMockEntities<Users_users>(
+const fakeUsers: Users_users[] = generateFakeEntities<Users_users>(
   { __typename: 'users' } as Users_users,
   ['name', 'rocket', 'twitter'],
   40
@@ -26,13 +26,13 @@ const Users = (): JSX.Element => {
   );
 
   /**
-   * Use the mockedUsers until api returns
+   * Use the fakeUsers until api returns
    * "Cannot return null for non-nullable field Query.users." error
    * Don't(!) use such approach in a production
    * */
   const users: Users_users[] =
     error?.message === 'Cannot return null for non-nullable field Query.users.'
-      ? mockedUsers
+      ? fakeUsers
       : data?.users || [];
 
   const columns: ColumnsType<Users_users> = [

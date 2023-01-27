@@ -1,4 +1,4 @@
-export const generateMockEntities = <Type = Record<string, unknown>>(
+export const generateFakeEntities = <Type = Record<string, unknown>>(
   entity: Type,
   additionalPropNames?: string[],
   arrayLength = 20
