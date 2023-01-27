@@ -82,7 +82,12 @@ const Home = (): JSX.Element => {
   ];
 
   return (
-    <Spin className={styles.root} spinning={loading} tip="Loading...">
+    <Spin
+      className={styles.root}
+      spinning={loading}
+      size="large"
+      tip="Loading..."
+    >
       <Space className={styles.content} direction="vertical" size="middle">
         <Title>The list of SpaseX ships</Title>
 
