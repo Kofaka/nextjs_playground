@@ -14,7 +14,7 @@ import { generateFakeEntities } from 'helpers/misc';
 // Ui
 import Table from 'ui/Table/Table';
 
-const fakeUsers: Users_users[] = generateFakeEntities<Users_users>(
+export const fakeUsers: Users_users[] = generateFakeEntities<Users_users>(
   { __typename: 'users' } as Users_users,
   ['name', 'rocket', 'twitter'],
   40
