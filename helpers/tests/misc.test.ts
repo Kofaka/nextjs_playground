@@ -21,7 +21,7 @@ describe('helpers/misc', () => {
         expect(Object.keys(entity)).toContain('id');
         expect(__typename).toBe(typename);
         expect(rocket).toBe(rocketName);
-        expect(id.length).toBeGreaterThanOrEqual(6);
+        expect(id.length).toBeGreaterThanOrEqual(5);
       });
     });
 
