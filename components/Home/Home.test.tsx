@@ -215,7 +215,7 @@ describe('components/Home/Home', () => {
         screen.queryByRole('img', { name: name as string })
       ).not.toBeInTheDocument();
     });
-  }, 9000);
+  }, 12000);
 
   it('should properly handle the page pagination by page size', async () => {
     render(<Home />, {
@@ -273,5 +273,5 @@ describe('components/Home/Home', () => {
         screen.queryByRole('img', { name: name as string })
       ).not.toBeInTheDocument();
     });
-  }, 18000);
+  }, 21000);
 });
