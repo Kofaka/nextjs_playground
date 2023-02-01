@@ -15,9 +15,9 @@ import { GET_SHIPS } from 'api/ships/queries';
 // Types
 import { Ships, Ships_ships, ShipsVariables } from 'api/ships/types/Ships';
 // Components
-import ShipsList from 'components/HomePage/components/ShipsList/ShipsList';
+import ShipsList from 'components/Home/components/ShipsList/ShipsList';
 // Styles
-import styles from './HomePage.module.scss';
+import styles from './Home.module.scss';
 
 dayjs.extend(localizedFormat);
 
@@ -36,7 +36,7 @@ const getExistingShipsList = (
 const DEFAULT_CURRENT_PAGE = 1;
 const DEFAULT_PAGE_SIZE = 3;
 
-const HomePage = (): JSX.Element => {
+const Home = (): JSX.Element => {
   const [currentPage, setCurrentPage] = useState<number>(DEFAULT_CURRENT_PAGE);
   const [pageSize, setPageSize] = useState<number>(DEFAULT_PAGE_SIZE);
 
@@ -82,7 +82,12 @@ const HomePage = (): JSX.Element => {
   ];
 
   return (
-    <Spin className={styles.root} spinning={loading} tip="Loading...">
+    <Spin
+      className={styles.root}
+      spinning={loading}
+      size="large"
+      tip="Loading..."
+    >
       <Space className={styles.content} direction="vertical" size="middle">
         <Title>The list of SpaseX ships</Title>
 
@@ -115,4 +120,4 @@ const HomePage = (): JSX.Element => {
   );
 };
 
-export default HomePage;
+export default Home;

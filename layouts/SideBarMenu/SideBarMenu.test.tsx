@@ -1,6 +1,6 @@
 import { wait, render, screen, userEvent } from 'test-utils';
 // Constants
-import { HOME, NEW_PAGE } from 'constants/routes';
+import { HOME, USERS } from 'constants/routes';
 // Components
 import SideBarMenu from './SideBarMenu';
 
@@ -15,11 +15,6 @@ describe('layouts/SideBarMenu/SideBarMenu', () => {
       screen.getByRole('menuitem', { name: /appstore Pagination Example/i })
     ).toBeInTheDocument();
     expect(screen.getByRole('img', { name: /appstore/i })).toBeInTheDocument();
-
-    expect(
-      screen.getByRole('menuitem', { name: /heat-map New Page Example/i })
-    ).toBeInTheDocument();
-    expect(screen.getByRole('img', { name: /heat-map/i })).toBeInTheDocument();
 
     expect(
       screen.getByRole('menuitem', { name: /fall Select Random Page/i })
@@ -62,11 +57,11 @@ describe('layouts/SideBarMenu/SideBarMenu', () => {
 
     await userEvent.click(
       screen.getByRole('menuitem', {
-        name: /heat-map New Page Example/i,
+        name: /user CRUD Example/i,
       })
     );
 
     expect(pushMock).toBeCalledTimes(1);
-    expect(pushMock).toBeCalledWith(NEW_PAGE);
+    expect(pushMock).toBeCalledWith(USERS);
   });
 });

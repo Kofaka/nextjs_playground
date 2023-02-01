@@ -4,7 +4,7 @@ import { Ships_ships } from 'api/ships/types/Ships';
 // Components
 import ShipsList from './ShipsList';
 
-describe('components/HomePage/components/ShipsList/ShipsList', () => {
+describe('components/Home/components/ShipsList/ShipsList', () => {
   it('should return null if no ships passed', () => {
     const { container } = render(<ShipsList />);
 

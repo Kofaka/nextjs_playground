@@ -2,8 +2,8 @@
   "schemaPath": "schema.json",
   "extensions": {
     "endpoints": {
-      "Default (https://api.spacex.land/graphql/)": {
-        "url": "https://api.spacex.land/graphql/",
+      "Default (https://spacex-production.up.railway.app/)": {
+        "url": "https://spacex-production.up.railway.app/",
         "headers": {
           "user-agent": "JS GraphQL"
         }

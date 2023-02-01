@@ -14,21 +14,26 @@ jest.mock('layouts/Head/Head', () => (props: any): JSX.Element => {
 
 describe('layouts/PageWrapper/PageWrapper', () => {
   it('should render basic components', async () => {
-    const title = 'Some random title';
-    const description = 'Some random description';
     const childrenContent = 'Some dummy children';
 
     render(
-      <PageWrapper title={title} description={description}>
+      <PageWrapper>
         <p>{childrenContent}</p>
-      </PageWrapper>
+      </PageWrapper>,
+      {
+        wrapperProps: {
+          router: {
+            pathname: HOME,
+          },
+        },
+      }
     );
     await wait();
 
     expect(mockHeadComponent).toHaveBeenCalledWith(
       expect.objectContaining({
-        title,
-        description,
+        title: 'The list of SpaseX ships',
+        description: 'The example of page with paginated list',
       })
     );
 

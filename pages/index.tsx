@@ -2,10 +2,10 @@ import { NextPage } from 'next';
 // Hocks
 import withApollo from 'hocs/withApollo';
 // Components
-import HomePage from 'components/HomePage/HomePage';
+import Home from 'components/Home/Home';
 
-const Home: NextPage = () => {
-  return <HomePage />;
+const HomePage: NextPage = () => {
+  return <Home />;
 };
 
-export default withApollo(Home);
+export default withApollo(HomePage);

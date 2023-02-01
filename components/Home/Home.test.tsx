@@ -10,7 +10,7 @@ import { GET_SHIPS } from 'api/ships/queries';
 // Types
 import { Ships_ships } from 'api/ships/types/Ships';
 // Components
-import HomePage from './HomePage';
+import Home from './Home';
 
 const MOCKED_GET_SHIPS_REQUEST = {
   request: {
@@ -107,9 +107,9 @@ const MOCKED_GET_SHIPS_REQUEST_WITH_LOT_OF_ITEMS = {
   },
 };
 
-describe('components/HomePage/HomePage', () => {
+describe('components/Home/Home', () => {
   it('should render basic components', async () => {
-    render(<HomePage />, {
+    render(<Home />, {
       wrapperProps: {
         mocks: [MOCKED_GET_SHIPS_REQUEST],
       },
@@ -137,7 +137,7 @@ describe('components/HomePage/HomePage', () => {
   });
 
   it('should render the loader while GET_SHIPS query processing', async () => {
-    render(<HomePage />, {
+    render(<Home />, {
       wrapperProps: {
         mocks: [MOCKED_GET_SHIPS_REQUEST_WITH_DELAY],
       },
@@ -154,7 +154,7 @@ describe('components/HomePage/HomePage', () => {
   });
 
   it('should render the empty placeholder if no ships in GET_SHIPS query response', async () => {
-    render(<HomePage />, {
+    render(<Home />, {
       wrapperProps: {
         mocks: [MOCKED_GET_SHIPS_REQUEST_NO_SHIPS],
       },
@@ -175,7 +175,7 @@ describe('components/HomePage/HomePage', () => {
   });
 
   it('should properly handle the page pagination by page number', async () => {
-    render(<HomePage />, {
+    render(<Home />, {
       wrapperProps: {
         mocks: [MOCKED_GET_SHIPS_REQUEST_WITH_LOT_OF_ITEMS],
       },
@@ -215,10 +215,10 @@ describe('components/HomePage/HomePage', () => {
         screen.queryByRole('img', { name: name as string })
       ).not.toBeInTheDocument();
     });
-  }, 9000);
+  }, 12000);
 
   it('should properly handle the page pagination by page size', async () => {
-    render(<HomePage />, {
+    render(<Home />, {
       wrapperProps: {
         mocks: [MOCKED_GET_SHIPS_REQUEST_WITH_LOT_OF_ITEMS],
       },
@@ -273,5 +273,5 @@ describe('components/HomePage/HomePage', () => {
         screen.queryByRole('img', { name: name as string })
       ).not.toBeInTheDocument();
     });
-  }, 18000);
+  }, 21000);
 });

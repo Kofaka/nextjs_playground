@@ -2,11 +2,11 @@ import { render, screen, userEvent } from 'test-utils';
 // Constants
 import { HOME } from 'constants/routes';
 // Components
-import NotFoundPage from './NotFoundPage';
+import NotFound from './NotFound';
 
-describe('components/NotFoundPage/NotFoundPage', () => {
+describe('components/NotFound/NotFound', () => {
   it('should render basic components', () => {
-    render(<NotFoundPage />);
+    render(<NotFound />);
 
     expect(screen.getByText(/404/i)).toBeInTheDocument();
     expect(
@@ -20,7 +20,7 @@ describe('components/NotFoundPage/NotFoundPage', () => {
   it('should properly handle the "Back Home" button click', async () => {
     const pushMock = jest.fn().mockImplementation(() => Promise.resolve());
 
-    render(<NotFoundPage />, {
+    render(<NotFound />, {
       wrapperProps: {
         router: {
           pathname: 'some-not-existing-page',
